@@ -3,7 +3,6 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Button3D } from '../ui/Button3D';
-import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
 
 export const Hero: React.FC = () => {

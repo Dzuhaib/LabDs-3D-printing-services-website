@@ -64,7 +64,7 @@ export default async function AboutPage({ params }: AboutProps) {
             <div className="order-1 lg:order-2">
               <Card3D className="aspect-square sm:aspect-video bg-white flex items-center justify-center p-8 sm:p-12 text-center max-w-[500px] lg:max-w-none mx-auto">
                 <div className="max-w-md">
-                   <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-4 italic">"Quality is not an act, it is a habit."</h3>
+                   <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-4 italic">&quot;Quality is not an act, it is a habit.&quot;</h3>
                    <p className="text-sm sm:text-base text-slate-500">{t('mission')}</p>
                 </div>
               </Card3D>

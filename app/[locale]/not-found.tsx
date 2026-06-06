@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Link } from '@/navigation';
 import { Button3D } from '@/components/ui/Button3D';
 import { Home } from 'lucide-react';
 
@@ -27,7 +26,7 @@ export default function NotFound() {
           <h1 className="text-9xl font-black text-slate-200 tracking-tighter leading-none">404</h1>
           <h2 className="text-3xl font-black text-slate-900 tracking-tight">Page not found</h2>
           <p className="text-slate-500">
-            Oops! It seems like the page you are looking for has been moved or doesn't exist anymore.
+            Oops! It seems like the page you are looking for has been moved or doesn&apos;t exist anymore.
           </p>
         </div>
 

@@ -2,7 +2,6 @@ import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { ProductCard } from "@/components/shop/ProductCard";
 import { fetch3DProductImages, type PixabayImage } from "@/lib/services/pixabay";
-import { Link } from "@/navigation";
 import { Button3D } from "@/components/ui/Button3D";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { RequestForm } from "@/components/forms/RequestForm";
@@ -20,7 +19,6 @@ export default async function Home({ params }: HomeProps) {
 
   const t = await getTranslations({ locale, namespace: 'Index' });
   const prodT = await getTranslations({ locale, namespace: 'Products' });
-  const common = await getTranslations({ locale, namespace: 'Common' });
   const requestT = await getTranslations({ locale, namespace: 'Request' });
 
   // Fetch images with a fallback to empty array

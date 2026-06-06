@@ -4,7 +4,7 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Button3D } from '../ui/Button3D';
 import { Card3D } from '../ui/Card3D';
-import { Send, Upload, Link as LinkIcon, MessageCircle, CheckCircle } from 'lucide-react';
+import { Send, Upload, Link as LinkIcon, CheckCircle } from 'lucide-react';
 
 export const RequestForm: React.FC = () => {
   const t = useTranslations('Request');

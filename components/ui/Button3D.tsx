@@ -54,7 +54,7 @@ export const Button3D: React.FC<Button3DProps> = ({
   }
 
   return (
-    <button className="inline-block w-full sm:w-auto" {...(props as any)}>
+    <button className="inline-block w-full sm:w-auto" {...props}>
       {content}
     </button>
   );
