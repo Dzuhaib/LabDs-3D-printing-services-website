@@ -105,12 +105,22 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                         </div>
                         <p className="text-xs text-slate-400 mb-2">{item.colors.join(', ')}</p>
                         <div className="flex justify-between items-center">
-                          <div className="flex items-center gap-2 bg-slate-100 rounded-lg p-1">
-                            <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="p-1 hover:bg-white rounded shadow-sm transition-all"><Minus size={12} /></button>
-                            <span className="text-sm font-bold w-6 text-center">{item.quantity}</span>
-                            <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="p-1 hover:bg-white rounded shadow-sm transition-all"><Plus size={12} /></button>
+                          <div className="flex items-center gap-2 bg-slate-100 rounded-lg p-1 recessed-slot">
+                            <button 
+                              onClick={() => updateQuantity(item.id, item.quantity - 1)} 
+                              className="p-1.5 hover:bg-white rounded shadow-sm transition-all active:scale-90"
+                            >
+                              <Minus size={12} className="extruded-detail text-slate-600" />
+                            </button>
+                            <span className="text-sm font-black w-6 text-center text-slate-900">{item.quantity}</span>
+                            <button 
+                              onClick={() => updateQuantity(item.id, item.quantity + 1)} 
+                              className="p-1.5 hover:bg-white rounded shadow-sm transition-all active:scale-90"
+                            >
+                              <Plus size={12} className="extruded-detail text-slate-600" />
+                            </button>
                           </div>
-                          <span className="font-bold text-slate-900">{(item.price * item.quantity).toFixed(2)}€</span>
+                          <span className="font-black text-slate-900">{(item.price * item.quantity).toFixed(2)}€</span>
                         </div>
                       </div>
                     </Card3D>

@@ -63,29 +63,29 @@ export const Footer: React.FC = () => {
               <div className="space-y-6">
                 <h4 className="text-slate-900 font-black uppercase tracking-widest text-[10px] extruded-detail">{t('social')}</h4>
                 <div className="flex justify-center sm:justify-start gap-4 mb-8">
-                  <a href="#" className="relative group w-10 h-10 bg-slate-200 rounded-xl side-layers">
-                     <div className="absolute inset-0 plastic-matte top-infill printed-bevel rounded-xl bg-white flex items-center justify-center text-slate-400 hover:text-brand transition-all translate-y-[-3px] group-hover:translate-y-[-1px] group-active:translate-y-[0px]">
-                        <Globe size={18} className="extruded-detail" />
+                  <a href="#" className="relative group w-12 h-12 bg-slate-200 rounded-xl side-layers">
+                     <div className="absolute inset-0 plastic-matte top-infill printed-bevel rounded-xl bg-white flex items-center justify-center text-slate-400 group-hover:text-brand transition-all translate-y-[-4px] group-hover:translate-y-[-2px] group-active:translate-y-[0px]">
+                        <Globe size={22} className="extruded-detail" />
                      </div>
                   </a>
-                  <a href="#" className="relative group w-10 h-10 bg-slate-200 rounded-xl side-layers">
-                     <div className="absolute inset-0 plastic-matte top-infill printed-bevel rounded-xl bg-white flex items-center justify-center text-slate-400 hover:text-brand transition-all translate-y-[-3px] group-hover:translate-y-[-1px] group-active:translate-y-[0px]">
-                        <Send size={18} className="extruded-detail" />
+                  <a href="#" className="relative group w-12 h-12 bg-slate-200 rounded-xl side-layers">
+                     <div className="absolute inset-0 plastic-matte top-infill printed-bevel rounded-xl bg-white flex items-center justify-center text-slate-400 group-hover:text-brand transition-all translate-y-[-4px] group-hover:translate-y-[-2px] group-active:translate-y-[0px]">
+                        <Send size={22} className="extruded-detail" />
                      </div>
                   </a>
                 </div>
                 <ul className="space-y-4 text-sm font-medium">
-                  <li className="flex items-center justify-center sm:justify-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center recessed-slot">
-                       <Mail size={16} className="text-slate-400 extruded-detail" />
+                  <li className="flex items-center justify-center sm:justify-start gap-3 group">
+                    <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center recessed-slot border border-slate-100/50 plastic-matte transition-transform group-hover:scale-105">
+                       <Mail size={18} className="text-slate-400 extruded-detail" />
                     </div>
-                    <span className="text-slate-500">info@labds3d.de</span>
+                    <span className="text-slate-500 font-bold">info@labds3d.de</span>
                   </li>
-                  <li className="flex items-center justify-center sm:justify-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center recessed-slot">
-                       <MessageCircle size={16} className="text-slate-400 extruded-detail" />
+                  <li className="flex items-center justify-center sm:justify-start gap-3 group">
+                    <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center recessed-slot border border-slate-100/50 plastic-matte transition-transform group-hover:scale-105">
+                       <MessageCircle size={18} className="text-slate-400 extruded-detail" />
                     </div>
-                    <span className="text-slate-500">+49 123 456789</span>
+                    <span className="text-slate-500 font-bold">+49 123 456789</span>
                   </li>
                 </ul>
               </div>
