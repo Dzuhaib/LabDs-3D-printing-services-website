@@ -23,15 +23,12 @@ export default async function Home({ params }: HomeProps) {
   const common = await getTranslations({ locale, namespace: 'Common' });
   const requestT = await getTranslations({ locale, namespace: 'Request' });
 
-  // Wrap in try-catch to prevent crash if Pixabay fails
-  let images: PixabayImage[] = [];
-  try {
-    // We could translate the search query too if needed
-    const searchQuery = locale === 'de' ? 'minimalistischer 3d druck' : 'minimalist 3d print';
-    images = await fetch3DProductImages(searchQuery, 3);
-  } catch (error) {
+  // Fetch images with a fallback to empty array
+  const searchQuery = locale === 'de' ? 'minimalistischer 3d druck' : 'minimalist 3d print';
+  const images: PixabayImage[] = await fetch3DProductImages(searchQuery, 3).catch((error) => {
     console.error("Home: Pixabay fetch failed", error);
-  }
+    return [];
+  });
   
   const previewProducts = [
     {
