@@ -1,7 +1,12 @@
 {
+  "Metadata": {
+    "title": "LABDS 3D | Professioneller 3D-Druck Service & Individuelle Lösungen",
+    "description": "Premium 3D-Druck Service in Deutschland. Maßgeschneiderte STL-Fertigung, Prototyping und hochwertige 3D-Druckprodukte aus dem Schwarzwald.",
+    "keywords": "3D-Druck Service, individueller 3D-Druck, professioneller 3D-Druck Deutschland, STL drucken, Prototyping, MakerWorld Drucke, Schwarzwald 3D-Druck"
+  },
   "Index": {
-    "title": "Individuelle 3D Drucke und einzigartige Produkte.",
-    "description": "Wir fertigen individuelle 3D Drucke nach Ihren Ideen oder liefern sofort verfügbare Qualitätsprodukte.",
+    "title": "Professioneller 3D-Druck Service & Individuelle Lösungen.",
+    "description": "Wir erwecken Ihre digitalen Designs mit industrieller Präzision zum Leben. Von individuellen STL-Anfragen bis hin zu Premium 3D-Druckprodukten.",
     "status": {
       "label": "Status",
       "active": "Produktion aktiv"
@@ -16,8 +21,8 @@
     }
   },
   "Products": {
-    "title": "Produkte",
-    "description": "Entdecken Sie unsere kuratierte Auswahl an hochwertigen 3D Druck Produkten.",
+    "title": "Premium 3D Produkte",
+    "description": "Entdecken Sie unsere kuratierte Auswahl an hochwertigen 3D Druck Produkten, gefertigt mit Präzision und Sorgfalt.",
     "categories": {
       "all": "Alle",
       "decor": "Deko",
@@ -56,15 +61,15 @@
     }
   },
   "Request": {
-    "title": "Eigenen 3D Druck anfragen",
-    "description": "Haben Sie ein Modell auf MakerWorld gefunden oder eine eigene Idee? Senden Sie uns die Details und wir erstellen Ihnen ein faires Angebot.",
+    "title": "Individuelle 3D-Druck Anfrage",
+    "description": "Modell auf MakerWorld gefunden oder eigene STL-Datei? Senden Sie uns die Details und wir erstellen Ihnen innerhalb von 24h ein professionelles Angebot.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Ihr Name",
       "whatsapp": "WhatsApp Nummer",
       "whatsappPlaceholder": "+49 123 456789",
       "description": "Bestellbeschreibung",
-      "descriptionPlaceholder": "Beschreiben Sie Ihr Projekt oder Ihre Idee...",
+      "descriptionPlaceholder": "Beschreiben Sie Ihr Projekt, Materialanforderungen oder Maßstab...",
       "reference": "Referenz Link",
       "referencePlaceholder": "MakerWorld, Printables, STL Link...",
       "upload": "Datei-Upload",
@@ -79,7 +84,7 @@
     }
   },
   "Cart": {
-    "title": "Warenkorb",
+    "title": "Ihre Bestellung",
     "empty": "Ihr Warenkorb ist leer.",
     "checkout": "Zur Kasse",
     "total": "Gesamt",
@@ -89,20 +94,20 @@
     "pay": "Bezahlen"
   },
   "About": {
-    "title": "Die Zukunft in 3D gestalten",
+    "title": "Präzisionstechnik in 3D",
     "story": "LABDS 3D Print begann mit einer einfachen Leidenschaft für das Erschaffen. Ansässig im Herzen des Schwarzwalds, verbinden wir traditionelle Handwerkswerte mit modernster additiver Fertigungstechnologie.",
-    "mission": "Unsere Mission ist es, Ihre digitalen Ideen mit Präzision, Qualität und einem Engagement für nachhaltige Produktion zum Leben zu erwecken.",
+    "mission": "Unsere Mission ist es, Ihre digitalen Ideen mit industrieller Präzision, Premium-Materialien und einem Engagement für nachhaltige Produktion zum Leben zu erwecken.",
     "process": {
-      "title": "Unser Prozess",
+      "title": "Unser Professioneller Prozess",
       "step1": "Beratung & Design",
-      "step2": "Materialauswahl",
-      "step3": "Präzisionsdruck",
-      "step4": "Qualitätssicherung"
+      "step2": "Industrielle Materialauswahl",
+      "step3": "Hochpräzisionsdruck",
+      "step4": "Professionelle Qualitätssicherung"
     }
   },
   "Contact": {
-    "title": "Kontaktieren Sie uns",
-    "subtitle": "Haben Sie eine Frage oder ein individuelles Projekt im Sinn? Wir sind hier, um zu helfen.",
+    "title": "Kontaktieren Sie unsere Experten",
+    "subtitle": "Haben Sie ein komplexes Projekt oder eine einfache Frage? Unsere 3D-Druck Experten beraten Sie gerne.",
     "info": {
       "email": "Schreiben Sie uns",
       "whatsapp": "Chat auf WhatsApp",
@@ -110,7 +115,7 @@
     }
   },
   "Footer": {
-    "tagline": "Premium 3D-Druck und individuelle Produkte aus dem Schwarzwald.",
+    "tagline": "Professioneller 3D-Druck und individuelle additive Fertigung aus dem Schwarzwald.",
     "links": "Quick Links",
     "social": "Folgen Sie uns",
     "legal": "Rechtliches",
@@ -120,8 +125,8 @@
   "Navigation": {
     "home": "Startseite",
     "products": "Produkte",
-    "request": "Anfrage",
-    "about": "Über uns",
+    "request": "Individueller Druck",
+    "about": "Unsere Expertise",
     "contact": "Kontakt",
     "cart": "Warenkorb"
   },

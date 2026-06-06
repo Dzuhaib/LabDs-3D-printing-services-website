@@ -1,7 +1,12 @@
 {
+  "Metadata": {
+    "title": "LABDS 3D | Professional 3D Printing Services & Custom Solutions",
+    "description": "Premium 3D printing services in Germany. Custom STL manufacturing, prototyping, and high-quality 3D printed products from the Black Forest.",
+    "keywords": "3D printing service, custom 3D prints, professional 3D printing Germany, STL printing, prototyping, MakerWorld prints, Black Forest 3D printing"
+  },
   "Index": {
-    "title": "Custom 3D Prints and Unique Products.",
-    "description": "We manufacture individual 3D prints according to your ideas or deliver immediately available quality products.",
+    "title": "Professional 3D Printing Services & Custom Solutions.",
+    "description": "We bring your digital designs to life with industrial-grade precision. From custom STL requests to premium 3D printed products.",
     "status": {
       "label": "Status",
       "active": "Production active"
@@ -16,8 +21,8 @@
     }
   },
   "Products": {
-    "title": "Products",
-    "description": "Discover our curated selection of high-quality 3D printed products.",
+    "title": "Premium 3D Products",
+    "description": "Discover our curated selection of high-quality 3D printed products, manufactured with precision and care.",
     "categories": {
       "all": "All",
       "decor": "Decor",
@@ -56,15 +61,15 @@
     }
   },
   "Request": {
-    "title": "Request custom 3D print",
-    "description": "Found a model on MakerWorld or have your own idea? Send us the details and we'll create a fair offer for you.",
+    "title": "Custom 3D Printing Request",
+    "description": "Found a model on MakerWorld or have your own STL file? Send us the details and we'll provide a professional quote within 24 hours.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
       "whatsapp": "WhatsApp Number",
       "whatsappPlaceholder": "+49 123 456789",
       "description": "Order Description",
-      "descriptionPlaceholder": "Describe your project or idea...",
+      "descriptionPlaceholder": "Describe your project, material requirements, or scale...",
       "reference": "Reference Link",
       "referencePlaceholder": "MakerWorld, Printables, STL Link...",
       "upload": "File Upload",
@@ -79,9 +84,9 @@
     }
   },
   "Cart": {
-    "title": "Cart",
+    "title": "Your Order",
     "empty": "Your cart is empty.",
-    "checkout": "Checkout",
+    "checkout": "Proceed to Checkout",
     "total": "Total",
     "shipping": "Shipping (Germany)",
     "summary": "Order Summary",
@@ -89,20 +94,20 @@
     "pay": "Pay"
   },
   "About": {
-    "title": "Crafting the Future in 3D",
+    "title": "Precision Engineering in 3D",
     "story": "LABDS 3D Print started with a simple passion for creation. Based in the heart of the Black Forest, we combine traditional craftsmanship values with cutting-edge additive manufacturing technology.",
-    "mission": "Our mission is to bring your digital ideas to life with precision, quality, and a commitment to sustainable production.",
+    "mission": "Our mission is to bring your digital ideas to life with industrial precision, premium materials, and a commitment to sustainable production.",
     "process": {
-      "title": "Our Process",
+      "title": "Our Professional Process",
       "step1": "Consultation & Design",
-      "step2": "Material Selection",
-      "step3": "Precision Printing",
-      "step4": "Quality Assurance"
+      "step2": "Industrial Material Selection",
+      "step3": "High-Precision Printing",
+      "step4": "Professional Quality Assurance"
     }
   },
   "Contact": {
-    "title": "Get in Touch",
-    "subtitle": "Have a question or a custom project in mind? We're here to help.",
+    "title": "Contact Our Experts",
+    "subtitle": "Have a complex project or a simple question? Our 3D printing experts are here to assist you.",
     "info": {
       "email": "Email Us",
       "whatsapp": "Chat on WhatsApp",
@@ -110,7 +115,7 @@
     }
   },
   "Footer": {
-    "tagline": "Premium 3D printing and custom products from the Black Forest.",
+    "tagline": "Professional 3D printing and custom additive manufacturing from the Black Forest.",
     "links": "Quick Links",
     "social": "Follow Us",
     "legal": "Legal",
@@ -120,9 +125,9 @@
   "Navigation": {
     "home": "Home",
     "products": "Products",
-    "request": "Request",
-    "about": "About Us",
-    "contact": "Contact Us",
+    "request": "Custom Printing",
+    "about": "Our Expertise",
+    "contact": "Contact",
     "cart": "Cart"
   },
   "Common": {

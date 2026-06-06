@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/navigation";
 import { Footer } from "@/components/layout/Footer";
@@ -17,13 +17,43 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "LabDS 3D Print | Premium 3D Printing",
-  description: "Individuelle 3D Drucke und hochwertige Produkte aus dem Schwarzwald.",
-};
-
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
+  
+  return {
+    title: {
+      default: t('title'),
+      template: `%s | LABDS 3D`
+    },
+    description: t('description'),
+    keywords: t('keywords'),
+    authors: [{ name: "LABDS 3D" }],
+    creator: "LABDS 3D",
+    publisher: "LABDS 3D",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      url: 'https://labds3d.de',
+      siteName: 'LABDS 3D Print',
+      locale: locale,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+    },
+    robots: {
+      index: true,
+      follow: true,
+    }
+  };
 }
 
 export default async function RootLayout({

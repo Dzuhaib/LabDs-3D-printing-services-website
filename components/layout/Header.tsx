@@ -32,7 +32,7 @@ export const Header: React.FC = () => {
         <div className="container mx-auto px-4 py-4 md:py-6">
           <div className="flex items-center justify-between relative h-10 md:h-12">
             {/* Left: Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-4 lg:gap-6 flex-1">
+            <nav className="hidden md:flex items-center gap-4 lg:gap-6 flex-1 md:pr-20 lg:pr-28">
               <Link href="/" className="text-[10px] lg:text-xs font-black text-slate-500 hover:text-brand transition-colors uppercase tracking-widest whitespace-nowrap">
                 {t('home')}
               </Link>
@@ -41,12 +41,6 @@ export const Header: React.FC = () => {
               </Link>
               <Link href="/request" className="text-[10px] lg:text-xs font-black text-slate-500 hover:text-brand transition-colors uppercase tracking-widest whitespace-nowrap">
                 {t('request')}
-              </Link>
-              <Link href="/about" className="text-[10px] lg:text-xs font-black text-slate-500 hover:text-brand transition-colors uppercase tracking-widest whitespace-nowrap">
-                {t('about')}
-              </Link>
-              <Link href="/contact" className="text-[10px] lg:text-xs font-black text-slate-500 hover:text-brand transition-colors uppercase tracking-widest whitespace-nowrap">
-                {t('contact')}
               </Link>
             </nav>
 
@@ -82,7 +76,14 @@ export const Header: React.FC = () => {
             </div>
 
             {/* Right: Utility Icons & Locale */}
-            <div className="flex items-center justify-end gap-1 sm:gap-3 md:gap-4 flex-1">
+            <div className="flex items-center justify-end gap-1 sm:gap-3 md:gap-4 lg:gap-6 flex-1 md:pl-20 lg:pl-28">
+              <Link href="/about" className="hidden xl:block text-[10px] font-black text-slate-400 hover:text-brand transition-colors uppercase tracking-widest whitespace-nowrap">
+                {t('about')}
+              </Link>
+              <Link href="/contact" className="hidden xl:block text-[10px] font-black text-slate-400 hover:text-brand transition-colors uppercase tracking-widest whitespace-nowrap">
+                {t('contact')}
+              </Link>
+
               <button 
                 onClick={toggleLocale}
                 className="hidden md:block text-[10px] font-black text-slate-400 hover:text-brand transition-colors cursor-pointer w-8"

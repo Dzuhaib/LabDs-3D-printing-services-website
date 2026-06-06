@@ -14,10 +14,10 @@ export default async function AboutPage({ params }: AboutProps) {
   const t = await getTranslations({ locale, namespace: 'About' });
 
   const steps = [
-    { icon: <Zap className="text-blue-500" />, title: t('process.step1') },
-    { icon: <Shield className="text-green-500" />, title: t('process.step2') },
-    { icon: <CheckCircle className="text-brand" />, title: t('process.step3') },
-    { icon: <Heart className="text-red-500" />, title: t('process.step4') }
+    { icon: <Zap className="text-blue-500" size={24} />, title: t('process.step1') },
+    { icon: <Shield className="text-green-500" size={24} />, title: t('process.step2') },
+    { icon: <CheckCircle className="text-brand" size={24} />, title: t('process.step3') },
+    { icon: <Heart className="text-red-500" size={24} />, title: t('process.step4') }
   ];
 
   return (
@@ -50,7 +50,7 @@ export default async function AboutPage({ params }: AboutProps) {
                 {steps.map((step, i) => (
                   <div key={i} className="flex items-center gap-5 sm:gap-6 group">
                     <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-2xl shadow-3d-soft flex items-center justify-center transition-transform group-hover:scale-110">
-                      {React.cloneElement(step.icon as React.ReactElement, { size: 24 })}
+                      {step.icon}
                     </div>
                     <div>
                       <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Step 0{i+1}</span>
