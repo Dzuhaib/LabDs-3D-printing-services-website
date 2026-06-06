@@ -9,7 +9,7 @@ interface Button3DProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
-  href?: string;
+  href?: React.ComponentProps<typeof Link>['href'];
 }
 
 export const Button3D: React.FC<Button3DProps> = ({
