@@ -1,0 +1,133 @@
+{
+  "Index": {
+    "title": "Custom 3D Prints and Unique Products.",
+    "description": "We manufacture individual 3D prints according to your ideas or deliver immediately available quality products.",
+    "status": {
+      "label": "Status",
+      "active": "Production active"
+    },
+    "cta": {
+      "primary": "Request custom 3D print",
+      "secondary": "View products"
+    },
+    "tiktok": {
+      "title": "See our Prints in Action",
+      "subtitle": "Follow us on TikTok for daily updates, behind-the-scenes, and new product reveals."
+    }
+  },
+  "Products": {
+    "title": "Products",
+    "description": "Discover our curated selection of high-quality 3D printed products.",
+    "categories": {
+      "all": "All",
+      "decor": "Decor",
+      "home": "Home"
+    },
+    "items": {
+      "planter": {
+        "name": "Geometric Planter",
+        "description": "An elegant, geometric flower pot with a fine layer structure."
+      },
+      "organizer": {
+        "name": "Desk Organizer",
+        "description": "Modular desk organizer for pens and small parts."
+      },
+      "lamp": {
+        "name": "Minimalist Lamp",
+        "description": "Atmospheric lamp with a unique light play through 3D printing."
+      },
+      "dragon": {
+        "name": "Articulated Dragon",
+        "description": "Movable dragon, printed in one piece - perfect as decoration."
+      },
+      "headphones": {
+        "name": "Headphone Stand",
+        "description": "Stable and stylish stand for your headphones."
+      },
+      "container": {
+        "name": "Kitchen Container",
+        "description": "Food-safe storage box with airtight seal."
+      }
+    },
+    "actions": {
+      "selectColor": "Select color",
+      "addToCart": "Add to cart",
+      "added": "Added"
+    }
+  },
+  "Request": {
+    "title": "Request custom 3D print",
+    "description": "Found a model on MakerWorld or have your own idea? Send us the details and we'll create a fair offer for you.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "whatsapp": "WhatsApp Number",
+      "whatsappPlaceholder": "+49 123 456789",
+      "description": "Order Description",
+      "descriptionPlaceholder": "Describe your project or idea...",
+      "reference": "Reference Link",
+      "referencePlaceholder": "MakerWorld, Printables, STL Link...",
+      "upload": "File Upload",
+      "uploadPlaceholder": "Select file (STL, JPG, MP4...)",
+      "privacy": "By submitting you accept our privacy policy.",
+      "submit": "Request quote"
+    },
+    "success": {
+      "title": "Thank you for your request!",
+      "description": "We'll check your 3D print and contact you via WhatsApp with an individual offer.",
+      "new": "New request"
+    }
+  },
+  "Cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty.",
+    "checkout": "Checkout",
+    "total": "Total",
+    "shipping": "Shipping (Germany)",
+    "summary": "Order Summary",
+    "back": "Back to cart",
+    "pay": "Pay"
+  },
+  "About": {
+    "title": "Crafting the Future in 3D",
+    "story": "LABDS 3D Print started with a simple passion for creation. Based in the heart of the Black Forest, we combine traditional craftsmanship values with cutting-edge additive manufacturing technology.",
+    "mission": "Our mission is to bring your digital ideas to life with precision, quality, and a commitment to sustainable production.",
+    "process": {
+      "title": "Our Process",
+      "step1": "Consultation & Design",
+      "step2": "Material Selection",
+      "step3": "Precision Printing",
+      "step4": "Quality Assurance"
+    }
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a question or a custom project in mind? We're here to help.",
+    "info": {
+      "email": "Email Us",
+      "whatsapp": "Chat on WhatsApp",
+      "location": "Location"
+    }
+  },
+  "Footer": {
+    "tagline": "Premium 3D printing and custom products from the Black Forest.",
+    "links": "Quick Links",
+    "social": "Follow Us",
+    "legal": "Legal",
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy"
+  },
+  "Navigation": {
+    "home": "Home",
+    "products": "Products",
+    "request": "Request",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "cart": "Cart"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "An error occurred.",
+    "rights": "All rights reserved."
+  }
+}

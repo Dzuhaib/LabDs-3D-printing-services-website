@@ -1,0 +1,133 @@
+{
+  "Index": {
+    "title": "Individuelle 3D Drucke und einzigartige Produkte.",
+    "description": "Wir fertigen individuelle 3D Drucke nach Ihren Ideen oder liefern sofort verfügbare Qualitätsprodukte.",
+    "status": {
+      "label": "Status",
+      "active": "Produktion aktiv"
+    },
+    "cta": {
+      "primary": "Eigenen 3D Druck anfragen",
+      "secondary": "Produkte ansehen"
+    },
+    "tiktok": {
+      "title": "Unsere Drucke in Aktion",
+      "subtitle": "Folgen Sie uns auf TikTok für tägliche Updates, Behind-the-Scenes und neue Produktenthüllungen."
+    }
+  },
+  "Products": {
+    "title": "Produkte",
+    "description": "Entdecken Sie unsere kuratierte Auswahl an hochwertigen 3D Druck Produkten.",
+    "categories": {
+      "all": "Alle",
+      "decor": "Deko",
+      "home": "Home"
+    },
+    "items": {
+      "planter": {
+        "name": "Geometrischer Blumentopf",
+        "description": "Ein eleganter, geometrischer Blumentopf mit feiner Layer-Struktur."
+      },
+      "organizer": {
+        "name": "Schreibtisch-Organizer",
+        "description": "Modularer Schreibtisch-Organizer für Stifte und Kleinteile."
+      },
+      "lamp": {
+        "name": "Minimalistische Lampe",
+        "description": "Stimmungsvolle Lampe mit einzigartigem Lichtspiel durch 3D Druck."
+      },
+      "dragon": {
+        "name": "Beweglicher Drache",
+        "description": "Beweglicher Drache, gedruckt in einem Stück - perfekt als Deko."
+      },
+      "headphones": {
+        "name": "Kopfhörerständer",
+        "description": "Stabiler und stylischer Ständer für Ihre Kopfhörer."
+      },
+      "container": {
+        "name": "Küchenbehälter",
+        "description": "Lebensmittelechte Aufbewahrungsbox mit luftdichtem Verschluss."
+      }
+    },
+    "actions": {
+      "selectColor": "Farbe auswählen",
+      "addToCart": "In den Warenkorb",
+      "added": "Hinzugefügt"
+    }
+  },
+  "Request": {
+    "title": "Eigenen 3D Druck anfragen",
+    "description": "Haben Sie ein Modell auf MakerWorld gefunden oder eine eigene Idee? Senden Sie uns die Details und wir erstellen Ihnen ein faires Angebot.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Ihr Name",
+      "whatsapp": "WhatsApp Nummer",
+      "whatsappPlaceholder": "+49 123 456789",
+      "description": "Bestellbeschreibung",
+      "descriptionPlaceholder": "Beschreiben Sie Ihr Projekt oder Ihre Idee...",
+      "reference": "Referenz Link",
+      "referencePlaceholder": "MakerWorld, Printables, STL Link...",
+      "upload": "Datei-Upload",
+      "uploadPlaceholder": "Datei auswählen (STL, JPG, MP4...)",
+      "privacy": "Mit dem Absenden akzeptieren Sie unsere Datenschutzbestimmungen.",
+      "submit": "Angebot anfordern"
+    },
+    "success": {
+      "title": "Vielen Dank für Ihre Anfrage!",
+      "description": "Wir prüfen Ihren 3D Druck und kontaktieren Sie über WhatsApp mit einem individuellen Angebot.",
+      "new": "Neue Anfrage"
+    }
+  },
+  "Cart": {
+    "title": "Warenkorb",
+    "empty": "Ihr Warenkorb ist leer.",
+    "checkout": "Zur Kasse",
+    "total": "Gesamt",
+    "shipping": "Versand (Deutschland)",
+    "summary": "Bestellübersicht",
+    "back": "Zurück zum Warenkorb",
+    "pay": "Bezahlen"
+  },
+  "About": {
+    "title": "Die Zukunft in 3D gestalten",
+    "story": "LABDS 3D Print begann mit einer einfachen Leidenschaft für das Erschaffen. Ansässig im Herzen des Schwarzwalds, verbinden wir traditionelle Handwerkswerte mit modernster additiver Fertigungstechnologie.",
+    "mission": "Unsere Mission ist es, Ihre digitalen Ideen mit Präzision, Qualität und einem Engagement für nachhaltige Produktion zum Leben zu erwecken.",
+    "process": {
+      "title": "Unser Prozess",
+      "step1": "Beratung & Design",
+      "step2": "Materialauswahl",
+      "step3": "Präzisionsdruck",
+      "step4": "Qualitätssicherung"
+    }
+  },
+  "Contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Haben Sie eine Frage oder ein individuelles Projekt im Sinn? Wir sind hier, um zu helfen.",
+    "info": {
+      "email": "Schreiben Sie uns",
+      "whatsapp": "Chat auf WhatsApp",
+      "location": "Standort"
+    }
+  },
+  "Footer": {
+    "tagline": "Premium 3D-Druck und individuelle Produkte aus dem Schwarzwald.",
+    "links": "Quick Links",
+    "social": "Folgen Sie uns",
+    "legal": "Rechtliches",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "Navigation": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "request": "Anfrage",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "cart": "Warenkorb"
+  },
+  "Common": {
+    "loading": "Lädt...",
+    "error": "Ein Fehler ist aufgetreten.",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}
