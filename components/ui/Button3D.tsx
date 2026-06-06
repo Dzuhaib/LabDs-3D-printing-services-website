@@ -22,10 +22,10 @@ export const Button3D: React.FC<Button3DProps> = ({
   const baseStyles = "relative inline-flex items-center justify-center font-bold transition-all duration-300 rounded-xl active:translate-y-1 focus:outline-none cursor-pointer";
   
   const variants = {
-    primary: "bg-brand text-white border-b-4 border-brand-dark hover:border-b-2 hover:translate-y-[2px] active:border-b-0 active:translate-y-[4px]",
-    secondary: "bg-white text-brand border-b-4 border-slate-200 hover:border-b-2 hover:translate-y-[2px] active:border-b-0 active:translate-y-[4px] border-x border-t border-slate-100",
-    outline: "bg-transparent text-brand border-2 border-brand border-b-4 hover:border-b-2 hover:translate-y-[2px] active:border-b-0 active:translate-y-[4px]",
-    ghost: "bg-slate-50 text-brand border-b-4 border-slate-200 hover:border-b-2 hover:translate-y-[2px] active:border-b-0 active:translate-y-[4px]"
+    primary: "bg-brand text-white depth-brand hover:translate-y-[1px] active:translate-y-[4px] active:shadow-none",
+    secondary: "bg-white text-brand depth-slate hover:translate-y-[1px] active:translate-y-[4px] active:shadow-none border-t border-x border-slate-100",
+    outline: "bg-transparent text-brand border-2 border-brand depth-brand hover:translate-y-[1px] active:translate-y-[4px] active:shadow-none",
+    ghost: "bg-slate-50 text-brand depth-slate hover:translate-y-[1px] active:translate-y-[4px] active:shadow-none"
   };
 
   const sizes = {
@@ -40,14 +40,12 @@ export const Button3D: React.FC<Button3DProps> = ({
         baseStyles, 
         variants[variant], 
         sizes[size], 
-        "matte-plastic layer-lines overflow-hidden",
+        "plastic-part infill-top plastic-grain plastic-fillet",
+        "overflow-hidden select-none",
         className
       )}
     >
-      <span className="relative z-10 flex items-center gap-2">{children}</span>
-      {/* Side grain simulation */}
-      <div className="absolute inset-y-0 -left-1 w-1 bg-black/5 pointer-events-none" />
-      <div className="absolute inset-y-0 -right-1 w-1 bg-black/5 pointer-events-none" />
+      <span className="relative z-10 flex items-center gap-2 drop-shadow-sm">{children}</span>
     </div>
   );
 
