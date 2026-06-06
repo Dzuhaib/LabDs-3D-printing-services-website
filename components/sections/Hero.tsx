@@ -15,7 +15,7 @@ export const Hero: React.FC = () => {
       {/* Hero Image Background with "Printed" Texture */}
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/hero.png"
+          src="/hero.jpeg"
           alt="Hero Background"
           fill
           className="object-cover opacity-90"
