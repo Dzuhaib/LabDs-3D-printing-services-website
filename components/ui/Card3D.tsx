@@ -13,11 +13,16 @@ interface Card3DProps {
 export const Card3D: React.FC<Card3DProps> = ({ children, className, animate = true }) => {
   const content = (
     <div className={cn(
-      "bg-white rounded-2xl p-6 shadow-3d-soft border border-slate-100 overflow-hidden relative",
-      "beveled-edge layer-lines",
+      "bg-white rounded-2xl p-6 overflow-hidden relative",
+      "beveled-edge layer-lines matte-plastic extruded-md",
+      "border border-slate-200/50",
       className
     )}>
-      {children}
+      {/* Surface finish simulation */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-black/5 to-transparent pointer-events-none" />
+      <div className="relative z-10">
+        {children}
+      </div>
     </div>
   );
 
@@ -28,8 +33,7 @@ export const Card3D: React.FC<Card3DProps> = ({ children, className, animate = t
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      whileHover={{ y: -4, boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)" }}
-      transition={{ duration: 0.3 }}
+      whileHover={{ y: -4, transition: { duration: 0.2 } }}
     >
       {content}
     </motion.div>

@@ -42,46 +42,46 @@ export const RequestForm: React.FC = () => {
         <form onSubmit={handleSubmit} className="space-y-8 md:space-y-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-10">
             <div className="space-y-3">
-              <label className="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-widest">{t('form.name')}</label>
+              <label className="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest">{t('form.name')}</label>
               <input 
                 required
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand transition-all shadow-inner-soft"
+                className="w-full recessed rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand/50 transition-all border border-slate-200/50"
                 placeholder={t('form.namePlaceholder')}
               />
             </div>
             <div className="space-y-3">
-              <label className="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-widest">{t('form.whatsapp')}</label>
+              <label className="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest">{t('form.whatsapp')}</label>
               <input 
                 required
                 type="tel"
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand transition-all shadow-inner-soft"
+                className="w-full recessed rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand/50 transition-all border border-slate-200/50"
                 placeholder={t('form.whatsappPlaceholder')}
               />
             </div>
           </div>
 
           <div className="space-y-3">
-            <label className="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-widest">{t('form.description')}</label>
+            <label className="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest">{t('form.description')}</label>
             <textarea 
               required
               rows={4}
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand transition-all shadow-inner-soft resize-none"
+              className="w-full recessed rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand/50 transition-all border border-slate-200/50 resize-none"
               placeholder={t('form.descriptionPlaceholder')}
             />
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-10">
             <div className="space-y-3">
-              <label className="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-widest flex items-center gap-2">
+              <label className="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
                 <LinkIcon size={14} className="text-slate-400" /> {t('form.reference')}
               </label>
               <input 
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand transition-all shadow-inner-soft"
+                className="w-full recessed rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand/50 transition-all border border-slate-200/50"
                 placeholder={t('form.referencePlaceholder')}
               />
             </div>
             <div className="space-y-3">
-              <label className="text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-widest flex items-center gap-2">
+              <label className="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
                 <Upload size={14} className="text-slate-400" /> {t('form.upload')}
               </label>
               <div className="relative group">
@@ -90,7 +90,7 @@ export const RequestForm: React.FC = () => {
                   multiple
                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20"
                 />
-                <div className="w-full bg-slate-50 border-2 border-dashed border-slate-200 group-hover:border-slate-400 rounded-xl px-4 py-4 text-slate-400 text-sm flex items-center justify-between transition-colors shadow-inner-soft">
+                <div className="w-full recessed border-2 border-dashed border-slate-200 group-hover:border-slate-400 rounded-xl px-4 py-4 text-slate-400 text-sm flex items-center justify-between transition-colors">
                   <span className="truncate pr-4">{t('form.uploadPlaceholder')}</span>
                   <Upload size={18} className="flex-shrink-0" />
                 </div>

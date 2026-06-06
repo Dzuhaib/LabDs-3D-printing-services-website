@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { Link } from '@/navigation';
 
@@ -23,26 +22,33 @@ export const Button3D: React.FC<Button3DProps> = ({
   const baseStyles = "relative inline-flex items-center justify-center font-bold transition-all duration-300 rounded-xl active:translate-y-1 focus:outline-none cursor-pointer";
   
   const variants = {
-    primary: "bg-brand text-white shadow-3d-button hover:bg-brand-dark",
-    secondary: "bg-white text-brand shadow-3d-button border border-slate-100 hover:bg-slate-50",
-    outline: "bg-transparent text-brand border-2 border-brand hover:bg-brand hover:text-white hover:shadow-3d-button",
-    ghost: "bg-white text-brand shadow-3d-button hover:bg-brand hover:text-white"
+    primary: "bg-brand text-white border-b-4 border-brand-dark hover:border-b-2 hover:translate-y-[2px] active:border-b-0 active:translate-y-[4px]",
+    secondary: "bg-white text-brand border-b-4 border-slate-200 hover:border-b-2 hover:translate-y-[2px] active:border-b-0 active:translate-y-[4px] border-x border-t border-slate-100",
+    outline: "bg-transparent text-brand border-2 border-brand border-b-4 hover:border-b-2 hover:translate-y-[2px] active:border-b-0 active:translate-y-[4px]",
+    ghost: "bg-slate-50 text-brand border-b-4 border-slate-200 hover:border-b-2 hover:translate-y-[2px] active:border-b-0 active:translate-y-[4px]"
   };
 
   const sizes = {
-    sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3 text-base",
-    lg: "px-8 py-4 text-lg"
+    sm: "px-4 py-2 text-sm rounded-lg",
+    md: "px-6 py-3 text-base rounded-xl",
+    lg: "px-8 py-4 text-lg rounded-2xl"
   };
 
   const content = (
-    <motion.span
-      whileHover={{ y: -2 }}
-      whileTap={{ y: 2 }}
-      className={cn(baseStyles, variants[variant], sizes[size], className)}
+    <div
+      className={cn(
+        baseStyles, 
+        variants[variant], 
+        sizes[size], 
+        "matte-plastic layer-lines overflow-hidden",
+        className
+      )}
     >
-      <span className="relative z-10">{children}</span>
-    </motion.span>
+      <span className="relative z-10 flex items-center gap-2">{children}</span>
+      {/* Side grain simulation */}
+      <div className="absolute inset-y-0 -left-1 w-1 bg-black/5 pointer-events-none" />
+      <div className="absolute inset-y-0 -right-1 w-1 bg-black/5 pointer-events-none" />
+    </div>
   );
 
   if (href) {
