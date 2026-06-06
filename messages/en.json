@@ -134,5 +134,20 @@
     "loading": "Loading...",
     "error": "An error occurred.",
     "rights": "All rights reserved."
+  },
+  "Errors": {
+    "404": {
+      "title": "Page not found",
+      "description": "Oops! It seems like the page you are looking for has been moved or doesn't exist anymore."
+    },
+    "general": {
+      "title": "Something went wrong",
+      "description": "An unexpected error occurred while rendering this page. Our team has been notified."
+    },
+    "actions": {
+      "retry": "Try again",
+      "home": "Back to Home",
+      "homeSuggestion": "Try again on homepage"
+    }
   }
 }

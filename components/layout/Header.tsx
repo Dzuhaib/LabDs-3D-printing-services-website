@@ -1,13 +1,12 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/navigation';
 import { ShoppingBag, Menu, X, User, Heart, Home, Package, ClipboardList, Info, Phone } from 'lucide-react';
 import { useCartStore } from '@/store/useCartStore';
 import { CartDrawer } from '../shop/CartDrawer';
-import { cn } from '@/lib/utils';
+import { LogoPlate } from '../ui/LogoPlate';
 
 export const Header: React.FC = () => {
   const t = useTranslations('Navigation');
@@ -73,26 +72,10 @@ export const Header: React.FC = () => {
 
                 {/* Center: Large Fabricated Round Logo (Overflowing) */}
                 <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20">
-                  <Link href="/" className="relative block group">
-                    {/* Side wall of the logo plate */}
-                    <div className="absolute inset-0 bg-slate-200 rounded-full translate-y-[6px] side-layers opacity-80" />
-                    
-                    {/* Top surface of the logo plate */}
-                    <div className={cn(
-                      "bg-white rounded-full p-2.5 printed-bevel plastic-matte top-infill print-base transition-transform group-hover:translate-y-[-2px] group-active:translate-y-[2px] flex items-center justify-center",
-                      "w-[95px] h-[95px] sm:w-[115px] sm:h-[115px] md:w-[145px] md:h-[145px]",
-                      "mt-8 md:mt-12"
-                    )}>
-                      <Image 
-                        src="/logo.png" 
-                        alt="LABDS 3D Logo" 
-                        width={140} 
-                        height={140} 
-                        className="w-full h-full object-contain rounded-full extruded-detail opacity-90"
-                        priority
-                      />
-                    </div>
-                  </Link>
+                  <LogoPlate 
+                    href="/" 
+                    className="mt-8 md:mt-12"
+                  />
                 </div>
 
                 {/* Right: Utility Icons & Locale */}

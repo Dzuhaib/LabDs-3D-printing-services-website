@@ -2,12 +2,12 @@ import { Header } from "@/components/layout/Header";
 import { ProductCard } from "@/components/shop/ProductCard";
 import { fetch3DProductImages, type PixabayImage } from "@/lib/services/pixabay";
 import { getLocale } from "next-intl/server";
+import { LogoSpacer } from "@/components/layout/LogoSpacer";
 
 export default async function ProductsPage() {
   const locale = await getLocale();
   const messages = (await import(`@/messages/${locale}.json`)).default;
   const t = messages.Products;
-  const common = messages.Common;
 
   const images: PixabayImage[] = await fetch3DProductImages('minimalist 3d print product', 6).catch((error) => {
     console.error("ProductsPage: Pixabay fetch failed", error);
@@ -62,6 +62,7 @@ export default async function ProductsPage() {
   return (
     <main className="min-h-screen bg-slate-50">
       <Header />
+      <LogoSpacer />
       
       <div className="container mx-auto px-4 py-20">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
@@ -80,18 +81,13 @@ export default async function ProductsPage() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
            {dummyProducts.map((product) => (
              <ProductCard key={product.id} product={product} />
            ))}
         </div>
       </div>
-
-      <footer className="py-12 border-t border-slate-100 bg-white">
-        <div className="container mx-auto px-4 text-center">
-           <p className="text-slate-400 text-sm font-medium">© 2026 LABDS 3D Print. {common.rights}</p>
-        </div>
-      </footer>
     </main>
   );
 }
+

@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import { Mail, MessageCircle, Globe, Send } from 'lucide-react';
+import { LogoPlate } from '../ui/LogoPlate';
 
 export const Footer: React.FC = () => {
   const t = useTranslations('Footer');
@@ -30,12 +30,7 @@ export const Footer: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 text-center sm:text-left">
               {/* Brand Column */}
               <div className="flex flex-col items-center sm:items-start space-y-6">
-                <Link href="/" className="relative block group">
-                  <div className="absolute inset-0 bg-slate-200 rounded-full translate-y-[3px] side-layers opacity-60" />
-                  <div className="relative bg-white rounded-full p-2 printed-bevel plastic-matte top-infill print-base transition-transform group-hover:translate-y-[-1px] group-active:translate-y-[1.5px] flex items-center justify-center w-16 h-16">
-                    <Image src="/logo.png" alt="LABDS 3D Logo" width={60} height={60} className="w-10 h-10 object-contain rounded-full extruded-detail opacity-90" />
-                  </div>
-                </Link>
+                <LogoPlate href="/" size="sm" />
                 <p className="text-sm leading-relaxed max-w-xs italic text-slate-500 font-medium">
                   {t('tagline')}
                 </p>

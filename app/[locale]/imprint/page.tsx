@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { setRequestLocale } from "next-intl/server";
+import { LogoSpacer } from "@/components/layout/LogoSpacer";
 
 interface ImprintProps {
   params: Promise<{ locale: string }>;
@@ -12,7 +13,9 @@ export default async function ImprintPage({ params }: ImprintProps) {
   return (
     <main className="min-h-screen bg-white">
       <Header />
+      <LogoSpacer />
       <div className="container mx-auto px-4 py-20 max-w-4xl">
+
         <h1 className="text-4xl font-black mb-12">Imprint</h1>
         <div className="prose max-w-none text-slate-600 space-y-6">
           <section>

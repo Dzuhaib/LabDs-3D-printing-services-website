@@ -3,6 +3,7 @@ import { Card3D } from "@/components/ui/Card3D";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CheckCircle, Zap, Shield, Heart } from 'lucide-react';
 import React from 'react';
+import { LogoSpacer } from "@/components/layout/LogoSpacer";
 
 interface AboutProps {
   params: Promise<{ locale: string }>;
@@ -23,10 +24,10 @@ export default async function AboutPage({ params }: AboutProps) {
   return (
     <main className="flex-1">
       <Header />
-      {/* Robust spacer for overflowing logo with Edge compatibility */}
-      <div className="h-32 md:h-44 lg:h-56" />
+      <LogoSpacer />
 
       {/* Hero Section */}
+
       <section className="pt-20 pb-20 md:pt-24 md:pb-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl text-center md:text-left">

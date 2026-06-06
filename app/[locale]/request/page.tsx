@@ -1,16 +1,17 @@
 import { Header } from "@/components/layout/Header";
 import { RequestForm } from "@/components/forms/RequestForm";
 import { useTranslations } from "next-intl";
+import { LogoSpacer } from "@/components/layout/LogoSpacer";
 
 export default function RequestPage() {
   const t = useTranslations('Request');
-  const common = useTranslations('Common');
 
   return (
     <main className="min-h-screen bg-slate-50">
       <Header />
+      <LogoSpacer />
       
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-20 pb-32">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-4 tracking-tight">
             {t('title')}
@@ -22,12 +23,7 @@ export default function RequestPage() {
 
         <RequestForm />
       </div>
-
-      <footer className="py-12 border-t border-slate-100 bg-white">
-        <div className="container mx-auto px-4 text-center">
-           <p className="text-slate-400 text-sm font-medium">© 2026 LABDS 3D Print. {common('rights')}</p>
-        </div>
-      </footer>
     </main>
   );
 }
+

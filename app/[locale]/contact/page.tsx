@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Card3D } from "@/components/ui/Card3D";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Mail, MessageCircle, MapPin } from 'lucide-react';
+import { LogoSpacer } from "@/components/layout/LogoSpacer";
 
 interface ContactProps {
   params: Promise<{ locale: string }>;
@@ -21,10 +22,10 @@ export default async function ContactPage({ params }: ContactProps) {
   return (
     <main className="flex-1">
       <Header />
-      {/* Robust spacer for overflowing logo with Edge compatibility */}
-      <div className="h-32 md:h-44 lg:h-56" />
+      <LogoSpacer />
       
       <section className="pt-20 pb-20 md:pt-24 md:pb-24 bg-white">
+
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tighter">

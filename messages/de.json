@@ -134,5 +134,20 @@
     "loading": "Lädt...",
     "error": "Ein Fehler ist aufgetreten.",
     "rights": "Alle Rechte vorbehalten."
+  },
+  "Errors": {
+    "404": {
+      "title": "Seite nicht gefunden",
+      "description": "Oops! Es scheint, als ob die gesuchte Seite verschoben wurde oder nicht mehr existiert."
+    },
+    "general": {
+      "title": "Etwas ist schiefgelaufen",
+      "description": "Ein unerwarteter Fehler ist aufgetreten. Unser Team wurde benachrichtigt."
+    },
+    "actions": {
+      "retry": "Erneut versuchen",
+      "home": "Zur Startseite",
+      "homeSuggestion": "Auf der Startseite versuchen"
+    }
   }
 }

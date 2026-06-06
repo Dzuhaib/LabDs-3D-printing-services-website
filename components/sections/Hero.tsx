@@ -18,13 +18,13 @@ export const Hero: React.FC = () => {
           src="/hero.jpeg"
           alt="Hero Background"
           fill
-          className="object-cover opacity-90"
+          className="object-cover opacity-100 brightness-[1.05] contrast-[1.05]"
           priority
+          quality={100}
+          unoptimized
         />
-        {/* Dark overlay for text contrast and 3D depth */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent" />
         {/* Subtle "Printed" texture overlay on background */}
-        <div className="absolute inset-0 top-infill opacity-10 pointer-events-none" />
+        <div className="absolute inset-0 top-infill opacity-5 pointer-events-none" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -35,10 +35,10 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center lg:text-left"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-slate-900 leading-[1.1] mb-6 tracking-tight drop-shadow-sm">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-slate-900 leading-[1.1] mb-6 tracking-tight drop-shadow-md">
               {t('title')}
             </h1>
-            <p className="text-lg sm:text-xl text-slate-700 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-bold">
+            <p className="text-lg sm:text-xl text-slate-700 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-bold drop-shadow-sm">
               {t('description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">

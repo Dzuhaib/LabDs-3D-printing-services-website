@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { setRequestLocale } from "next-intl/server";
+import { LogoSpacer } from "@/components/layout/LogoSpacer";
 
 interface PrivacyProps {
   params: Promise<{ locale: string }>;
@@ -12,7 +13,9 @@ export default async function PrivacyPage({ params }: PrivacyProps) {
   return (
     <main className="min-h-screen bg-white">
       <Header />
+      <LogoSpacer />
       <div className="container mx-auto px-4 py-20 max-w-4xl">
+
         <h1 className="text-4xl font-black mb-12">Privacy Policy</h1>
         <div className="prose max-w-none text-slate-600 space-y-6">
           <p>Your privacy is important to us. It is LABDS 3D Print&apos;s policy to respect your privacy regarding any information we may collect from you across our website.</p>
