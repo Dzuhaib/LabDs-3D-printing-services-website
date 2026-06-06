@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
-import { Mail, MessageCircle, Globe, Send, Instagram, Facebook } from 'lucide-react';
+import { Mail, MessageCircle, Globe, Send } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const t = useTranslations('Footer');
