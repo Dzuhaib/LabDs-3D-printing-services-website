@@ -1,6 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { ProductCard } from "@/components/shop/ProductCard";
-import { fetch3DProductImages } from "@/lib/services/pixabay";
+import { fetch3DProductImages, type PixabayImage } from "@/lib/services/pixabay";
 import { getLocale } from "next-intl/server";
 
 export default async function ProductsPage() {
@@ -9,12 +9,10 @@ export default async function ProductsPage() {
   const t = messages.Products;
   const common = messages.Common;
 
-  let images = [];
-  try {
-    images = await fetch3DProductImages('minimalist 3d print product', 6);
-  } catch (error) {
+  const images: PixabayImage[] = await fetch3DProductImages('minimalist 3d print product', 6).catch((error) => {
     console.error("ProductsPage: Pixabay fetch failed", error);
-  }
+    return [];
+  });
   
   const dummyProducts = [
     {
