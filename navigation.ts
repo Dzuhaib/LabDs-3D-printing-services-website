@@ -26,6 +26,14 @@ export const routing = defineRouting({
     '/contact': {
       en: '/contact',
       de: '/kontakt'
+    },
+    '/imprint': {
+      en: '/imprint',
+      de: '/impressum'
+    },
+    '/privacy': {
+      en: '/privacy',
+      de: '/datenschutz'
     }
   }
 });
