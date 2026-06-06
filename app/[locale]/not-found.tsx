@@ -32,11 +32,9 @@ export default function NotFound() {
         </div>
 
         <div className="flex justify-center">
-          <Link href="/">
-            <Button3D className="flex items-center gap-2">
-              <Home size={18} /> Back to Home
-            </Button3D>
-          </Link>
+          <Button3D href="/" className="flex items-center gap-2">
+            <Home size={18} /> Back to Home
+          </Button3D>
         </div>
       </div>
     </div>
