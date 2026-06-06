@@ -45,7 +45,7 @@ export const RequestForm: React.FC = () => {
               <label className="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest">{t('form.name')}</label>
               <input 
                 required
-                className="w-full recessed rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand/50 transition-all border border-slate-200/50"
+                className="w-full recessed-slot rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand/50 transition-all border border-slate-200/50 plastic-matte"
                 placeholder={t('form.namePlaceholder')}
               />
             </div>
@@ -54,7 +54,7 @@ export const RequestForm: React.FC = () => {
               <input 
                 required
                 type="tel"
-                className="w-full recessed rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand/50 transition-all border border-slate-200/50"
+                className="w-full recessed-slot rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand/50 transition-all border border-slate-200/50 plastic-matte"
                 placeholder={t('form.whatsappPlaceholder')}
               />
             </div>
@@ -65,7 +65,7 @@ export const RequestForm: React.FC = () => {
             <textarea 
               required
               rows={4}
-              className="w-full recessed rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand/50 transition-all border border-slate-200/50 resize-none"
+              className="w-full recessed-slot rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand/50 transition-all border border-slate-200/50 resize-none plastic-matte"
               placeholder={t('form.descriptionPlaceholder')}
             />
           </div>
@@ -73,16 +73,16 @@ export const RequestForm: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-8 md:gap-10">
             <div className="space-y-3">
               <label className="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
-                <LinkIcon size={14} className="text-slate-400" /> {t('form.reference')}
+                <LinkIcon size={14} className="text-slate-400 extruded-detail" /> {t('form.reference')}
               </label>
               <input 
-                className="w-full recessed rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand/50 transition-all border border-slate-200/50"
+                className="w-full recessed-slot rounded-xl px-4 py-4 text-base focus:outline-none focus:ring-2 focus:ring-brand/50 transition-all border border-slate-200/50 plastic-matte"
                 placeholder={t('form.referencePlaceholder')}
               />
             </div>
             <div className="space-y-3">
               <label className="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
-                <Upload size={14} className="text-slate-400" /> {t('form.upload')}
+                <Upload size={14} className="text-slate-400 extruded-detail" /> {t('form.upload')}
               </label>
               <div className="relative group">
                  <input 
@@ -90,9 +90,9 @@ export const RequestForm: React.FC = () => {
                   multiple
                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20"
                 />
-                <div className="w-full recessed border-2 border-dashed border-slate-200 group-hover:border-slate-400 rounded-xl px-4 py-4 text-slate-400 text-sm flex items-center justify-between transition-colors">
+                <div className="w-full recessed-slot border-2 border-dashed border-slate-200 group-hover:border-slate-400 rounded-xl px-4 py-4 text-slate-400 text-sm flex items-center justify-between transition-colors plastic-matte">
                   <span className="truncate pr-4">{t('form.uploadPlaceholder')}</span>
-                  <Upload size={18} className="flex-shrink-0" />
+                  <Upload size={18} className="flex-shrink-0 extruded-detail" />
                 </div>
               </div>
             </div>
