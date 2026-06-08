@@ -62,6 +62,13 @@ export const PRODUCTS: Product[] = [
     price: 24.99,
     image: '/product/nescafe-dispenser.jpeg',
     category: 'home'
+  },
+  {
+    id: 'calendar',
+    slug: 'birthday-calendar',
+    price: 39.90,
+    image: '/product/birthday-calendar.jpeg',
+    category: 'decor'
   }
 ];
 
