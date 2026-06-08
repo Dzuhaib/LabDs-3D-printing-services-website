@@ -69,6 +69,13 @@ export const PRODUCTS: Product[] = [
     price: 39.90,
     image: '/product/birthday-calendar.jpeg',
     category: 'decor'
+  },
+  {
+    id: 'pikachu-stitch',
+    slug: 'pikachu-stitch-figure',
+    price: 34.90,
+    image: '/product/pikachu-stitch.jpeg',
+    category: 'decor'
   }
 ];
 
