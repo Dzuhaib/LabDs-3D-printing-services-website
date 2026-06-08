@@ -29,30 +29,6 @@
       "home": "Home"
     },
     "items": {
-      "planter": {
-        "name": "Geometric Planter",
-        "description": "An elegant, geometric flower pot with a fine layer structure."
-      },
-      "organizer": {
-        "name": "Desk Organizer",
-        "description": "Modular desk organizer for pens and small parts."
-      },
-      "lamp": {
-        "name": "Minimalist Lamp",
-        "description": "Atmospheric lamp with a unique light play through 3D printing."
-      },
-      "dragon": {
-        "name": "Articulated Dragon",
-        "description": "Movable dragon, printed in one piece - perfect as decoration."
-      },
-      "headphones": {
-        "name": "Headphone Stand",
-        "description": "Stable and stylish stand for your headphones."
-      },
-      "container": {
-        "name": "Kitchen Container",
-        "description": "Food-safe storage box with airtight seal."
-      },
       "nescafe": {
         "name": "Nescafé Gold 200g Coffee Dispenser",
         "shortDescription": "Make your coffee routine cleaner, faster and more stylish ☕✨ This 3D printed coffee dispenser is specially designed for the Nescafé Gold 200g jar.",

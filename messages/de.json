@@ -29,30 +29,6 @@
       "home": "Home"
     },
     "items": {
-      "planter": {
-        "name": "Geometrischer Blumentopf",
-        "description": "Ein eleganter, geometrischer Blumentopf mit feiner Layer-Struktur."
-      },
-      "organizer": {
-        "name": "Schreibtisch-Organizer",
-        "description": "Modularer Schreibtisch-Organizer für Stifte und Kleinteile."
-      },
-      "lamp": {
-        "name": "Minimalistische Lampe",
-        "description": "Stimmungsvolle Lampe mit einzigartigem Lichtspiel durch 3D Druck."
-      },
-      "dragon": {
-        "name": "Beweglicher Drache",
-        "description": "Beweglicher Drache, gedruckt in einem Stück - perfekt als Deko."
-      },
-      "headphones": {
-        "name": "Kopfhörerständer",
-        "description": "Stabiler und stylischer Ständer für Ihre Kopfhörer."
-      },
-      "container": {
-        "name": "Küchenbehälter",
-        "description": "Lebensmittelechte Aufbewahrungsbox mit luftdichtem Verschluss."
-      },
       "nescafe": {
         "name": "Nescafé Gold 200g Kaffeespender",
         "shortDescription": "Machen Sie Ihre Kaffeeroutine sauberer, schneller und stilvoller ☕✨ Dieser 3D-gedruckte Kaffeespender ist speziell für das Nescafé Gold 200g Glas konzipiert.",
@@ -121,7 +97,7 @@
       "pikachu-stitch": {
         "name": "Pikachu im Stitch-Pyjama Figur | 23 cm",
         "shortDescription": "Eine bezaubernde und auffällige 3D-gedruckte Fan-Art-Figur von Pikachu in einem Pyjama-Kostüm im Stitch-Stil ⚡💙 Perfekt für Sammler und Fans.",
-        "description": "Bringen Sie Extra-Niedlichkeit und Persönlichkeit in Ihre Sammlung mit dieser fantastischen 3D-gedruckten Pikachu-Figur im Stitch-Pyjama ⚡💙✨\n\nDieses Sammlerstück kombiniert den Charme von Pikachu mit dem verspielten und gemütlichen Look eines von Stitch inspirierten Pyjama-Outfits und schafft so ein lustiges und einzigartiges Fan-Art-Design, das überall auffällt. Es ist perfekt für die Präsentation in Regalen, auf Schreibtischen, in Gaming-Setups oder Sammlerräumen.",
+        "description": "Bringen Sie Extra-Niedlichkeit und Persönlichkeit in Ihre Sammlung mit dieser fantastischen 3D-gedruckten Pikachu-Figur im Stitch-Pyjama ⚡💙✨\n\nDieses Sammlerstück kombiniert den Charme von Pikachu mit dem verspielten und gemütlichen Look eines von Stitch inspirierten Pyjama-Outfits und schaffft so ein lustiges und einzigartiges Fan-Art-Design, das überall auffällt. Es ist perfekt für die Präsentation in Regalen, auf Schreibtischen, in Gaming-Setups oder Sammlerräumen.",
         "compatibilityNotice": "⚠️ Dies ist ein Fan-Art / inspiriertes Sammlerstück. Es ist ein inoffizieller Artikel und kein lizenziertes Produkt.",
         "highlights": [
           "3D-gedrucktes Fan-Art-Sammlerstück",
