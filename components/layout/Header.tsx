@@ -44,7 +44,7 @@ export const Header: React.FC = () => {
 
               <div className="px-4 py-4 md:py-6 flex items-center justify-between relative h-10 md:h-16">
                 {/* Left: Desktop Navigation */}
-                <nav className="hidden md:flex items-center gap-4 lg:gap-8 flex-1 md:pr-20 lg:pr-32">
+                <nav className="hidden md:flex items-center gap-4 lg:gap-6 flex-1 justify-start">
                   <Link href="/" className="group flex items-center gap-2 text-[10px] lg:text-xs font-black text-slate-500 hover:text-brand transition-all uppercase tracking-widest whitespace-nowrap">
                     <Home size={16} className="extruded-detail group-hover:scale-110 transition-transform" />
                     {t('home')}
@@ -71,15 +71,17 @@ export const Header: React.FC = () => {
                 </div>
 
                 {/* Center: Large Fabricated Round Logo (Overflowing) */}
-                <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20">
-                  <LogoPlate 
-                    href="/" 
-                    className="mt-8 md:mt-12"
-                  />
+                <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20 pointer-events-none">
+                  <div className="pointer-events-auto">
+                    <LogoPlate 
+                      href="/" 
+                      className="mt-8 md:mt-12"
+                    />
+                  </div>
                 </div>
 
                 {/* Right: Utility Icons & Locale */}
-                <div className="flex items-center justify-end gap-1 sm:gap-4 md:gap-5 lg:gap-8 flex-1 md:pl-20 lg:pl-32">
+                <div className="flex items-center justify-end gap-1 sm:gap-4 md:gap-4 lg:gap-6 flex-1">
                   <Link href="/about" className="hidden lg:flex items-center gap-2 text-[10px] font-black text-slate-400 hover:text-brand transition-all uppercase tracking-widest whitespace-nowrap group">
                     <Info size={16} className="extruded-detail group-hover:scale-110 transition-transform" />
                     {t('about')}
@@ -89,7 +91,7 @@ export const Header: React.FC = () => {
                     {t('contact')}
                   </Link>
 
-                  <div className="h-4 w-px bg-slate-200 hidden md:block" />
+                  <div className="h-4 w-px bg-slate-200 hidden md:block mx-1" />
 
                   <button 
                     onClick={toggleLocale}
@@ -108,7 +110,7 @@ export const Header: React.FC = () => {
 
                   <button 
                     onClick={() => setIsCartOpen(true)}
-                    className="relative text-slate-700 hover:text-brand transition-all p-2 -mr-2 group active:scale-95"
+                    className="relative text-slate-700 hover:text-brand transition-all p-2 group active:scale-95"
                     aria-label="Cart"
                   >
                     <ShoppingBag size={24} className="sm:w-7 sm:h-7 extruded-detail group-hover:scale-110 transition-transform" />
