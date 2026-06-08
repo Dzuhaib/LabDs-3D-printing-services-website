@@ -33,10 +33,23 @@ export default async function Home({ params }: HomeProps) {
         .then(imgs => imgs[0])
         .catch(() => null)
     )
-  ).then(res => res.filter((img): img is PixabayImage => img !== null));
+  ).then(res => res.filter((img): img is PixabayImage => !!img));
 
   const previewProducts = featuredProductsData.map(product => {
-    const itemT = prodT.raw('items')[product.id];
+    const items = prodT.raw('items');
+    const itemT = items ? items[product.id] : null;
+    
+    if (!itemT) {
+      return {
+        id: product.id,
+        slug: product.slug,
+        name: product.id,
+        price: product.price,
+        description: '',
+        image: product.image || 'https://images.pexels.com/photos/4241704/pexels-photo-4241704.jpeg?auto=compress&cs=tinysrgb&w=800'
+      };
+    }
+
     let image = product.image;
     
     if (!image && product.pixabayQuery) {

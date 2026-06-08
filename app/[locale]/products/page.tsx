@@ -18,10 +18,22 @@ export default async function ProductsPage() {
         .then(imgs => imgs[0])
         .catch(() => null)
     )
-  ).then(res => res.filter((img): img is PixabayImage => img !== null));
+  ).then(res => res.filter((img): img is PixabayImage => !!img));
   
   const products = PRODUCTS.map((product, index) => {
-    const itemT = t.items[product.id];
+    const itemT = t.items?.[product.id];
+    
+    if (!itemT) {
+      return {
+        id: product.id,
+        slug: product.slug,
+        name: product.id,
+        price: product.price,
+        description: '',
+        image: product.image || 'https://images.pexels.com/photos/4241704/pexels-photo-4241704.jpeg?auto=compress&cs=tinysrgb&w=800'
+      };
+    }
+
     let image = product.image;
     
     if (!image && product.pixabayQuery) {

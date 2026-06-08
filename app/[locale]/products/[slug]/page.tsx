@@ -46,7 +46,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
   if (!product) notFound();
 
   const t = await getTranslations({ locale, namespace: 'Products' });
-  const itemT = t.raw('items')[product.id];
+  const items = t.raw('items');
+  const itemT = items ? items[product.id] : null;
   
   if (!itemT) notFound();
 
