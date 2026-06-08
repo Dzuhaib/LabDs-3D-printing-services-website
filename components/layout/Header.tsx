@@ -63,7 +63,7 @@ export const Header: React.FC = () => {
                 <div className="md:hidden flex-1 flex items-center">
                   <button 
                     onClick={() => setIsMenuOpen(!isMenuOpen)} 
-                    className="p-2 -ml-2 text-slate-600 hover:text-brand transition-all active:scale-95"
+                    className="p-2 text-slate-600 hover:text-brand transition-all active:scale-95"
                     aria-label="Toggle menu"
                   >
                     {isMenuOpen ? <X size={26} className="extruded-detail" /> : <Menu size={26} className="extruded-detail" />}
