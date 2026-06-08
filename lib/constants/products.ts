@@ -83,6 +83,13 @@ export const PRODUCTS: Product[] = [
     price: 49.90,
     image: '/product/fitzek-gnome.jpeg',
     category: 'decor'
+  },
+  {
+    id: 'orko-bowl',
+    slug: 'orko-popcorn-bowl',
+    price: 34.50,
+    image: '/product/orko-bowl.jpeg',
+    category: 'home'
   }
 ];
 
