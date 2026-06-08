@@ -27,7 +27,7 @@ interface ProductCardProps {
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const t = useTranslations('Products.actions');
-  const [selectedColor, setSelectedColor] = React.useState<Filament>({ id: 'matte-charcoal', name: 'Matte Charcoal', hex: '#2B2B2B', category: 'Matte' });
+  const [selectedColor, setSelectedColor] = React.useState<Filament>(BAMBU_FILAMENTS[0]);
   const [added, setAdded] = React.useState(false);
   const addItem = useCartStore((state) => state.addItem);
 
