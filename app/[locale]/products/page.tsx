@@ -3,61 +3,42 @@ import { ProductCard } from "@/components/shop/ProductCard";
 import { fetch3DProductImages, type PixabayImage } from "@/lib/services/pixabay";
 import { getLocale } from "next-intl/server";
 import { LogoSpacer } from "@/components/layout/LogoSpacer";
+import { PRODUCTS } from "@/lib/constants/products";
 
 export default async function ProductsPage() {
   const locale = await getLocale();
   const messages = (await import(`@/messages/${locale}.json`)).default;
   const t = messages.Products;
 
-  const images: PixabayImage[] = await fetch3DProductImages('minimalist 3d print product', 6).catch((error) => {
-    console.error("ProductsPage: Pixabay fetch failed", error);
-    return [];
-  });
+  // Fetch images for products that don't have one
+  const pixabayProducts = PRODUCTS.filter(p => !p.image && p.pixabayQuery);
+  const images: PixabayImage[] = await Promise.all(
+    pixabayProducts.map(p => 
+      fetch3DProductImages(p.pixabayQuery!, 1)
+        .then(imgs => imgs[0])
+        .catch(() => null)
+    )
+  ).then(res => res.filter((img): img is PixabayImage => img !== null));
   
-  const dummyProducts = [
-    {
-      id: '1',
-      name: t.items.planter.name,
-      price: 19.99,
-      description: t.items.planter.description,
-      image: images[0]?.webformatURL || 'https://images.pexels.com/photos/4241704/pexels-photo-4241704.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      id: '2',
-      name: t.items.organizer.name,
-      price: 24.50,
-      description: t.items.organizer.description,
-      image: images[1]?.webformatURL || 'https://images.pexels.com/photos/3823488/pexels-photo-3823488.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      id: '3',
-      name: t.items.lamp.name,
-      price: 45.00,
-      description: t.items.lamp.description,
-      image: images[2]?.webformatURL || 'https://images.pexels.com/photos/1112498/pexels-photo-1112498.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      id: '4',
-      name: t.items.dragon.name,
-      price: 29.00,
-      description: t.items.dragon.description,
-      image: images[3]?.webformatURL || 'https://images.pexels.com/photos/20967/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      id: '5',
-      name: t.items.headphones.name,
-      price: 32.99,
-      description: t.items.headphones.description,
-      image: images[4]?.webformatURL || 'https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      id: '6',
-      name: t.items.container.name,
-      price: 15.75,
-      description: t.items.container.description,
-      image: images[5]?.webformatURL || 'https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=800'
+  const products = PRODUCTS.map((product, index) => {
+    const itemT = t.items[product.id];
+    let image = product.image;
+    
+    if (!image && product.pixabayQuery) {
+      // Find the image from our fetched results
+      const pixabayImg = images.find(img => img.tags.toLowerCase().includes(product.id) || images.indexOf(img) === pixabayProducts.indexOf(product));
+      image = pixabayImg?.webformatURL || 'https://images.pexels.com/photos/4241704/pexels-photo-4241704.jpeg?auto=compress&cs=tinysrgb&w=800';
     }
-  ];
+
+    return {
+      id: product.id,
+      slug: product.slug,
+      name: itemT.name,
+      price: product.price,
+      description: itemT.shortDescription || itemT.description,
+      image: image
+    };
+  });
 
   return (
     <main className="min-h-screen bg-slate-50">
@@ -82,7 +63,7 @@ export default async function ProductsPage() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
-           {dummyProducts.map((product) => (
+           {products.map((product) => (
              <ProductCard key={product.id} product={product} />
            ))}
         </div>

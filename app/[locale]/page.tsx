@@ -11,6 +11,8 @@ interface HomeProps {
   params: Promise<{ locale: string }>;
 }
 
+import { PRODUCTS } from "@/lib/constants/products";
+
 export default async function Home({ params }: HomeProps) {
   const { locale } = await params;
   
@@ -21,36 +23,36 @@ export default async function Home({ params }: HomeProps) {
   const prodT = await getTranslations({ locale, namespace: 'Products' });
   const requestT = await getTranslations({ locale, namespace: 'Request' });
 
-  // Fetch images with a fallback to empty array
-  const searchQuery = locale === 'de' ? 'minimalistischer 3d druck' : 'minimalist 3d print';
-  const images: PixabayImage[] = await fetch3DProductImages(searchQuery, 3).catch((error) => {
-    console.error("Home: Pixabay fetch failed", error);
-    return [];
-  });
+  // Fetch images for featured products if needed
+  const featuredIds = ['planter', 'organizer', 'nescafe'];
+  const featuredProductsData = PRODUCTS.filter(p => featuredIds.includes(p.id));
   
-  const previewProducts = [
-    {
-      id: '1',
-      name: prodT('items.planter.name'),
-      price: 19.99,
-      description: prodT('items.planter.description'),
-      image: images[0]?.webformatURL || 'https://images.pexels.com/photos/4241704/pexels-photo-4241704.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      id: '2',
-      name: prodT('items.organizer.name'),
-      price: 24.50,
-      description: prodT('items.organizer.description'),
-      image: images[1]?.webformatURL || 'https://images.pexels.com/photos/3823488/pexels-photo-3823488.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      id: '3',
-      name: prodT('items.lamp.name'),
-      price: 45.00,
-      description: prodT('items.lamp.description'),
-      image: images[2]?.webformatURL || 'https://images.pexels.com/photos/1112498/pexels-photo-1112498.jpeg?auto=compress&cs=tinysrgb&w=800'
+  const images: PixabayImage[] = await Promise.all(
+    featuredProductsData.filter(p => !p.image).map(p => 
+      fetch3DProductImages(p.pixabayQuery!, 1)
+        .then(imgs => imgs[0])
+        .catch(() => null)
+    )
+  ).then(res => res.filter((img): img is PixabayImage => img !== null));
+
+  const previewProducts = featuredProductsData.map(product => {
+    const itemT = prodT.raw('items')[product.id];
+    let image = product.image;
+    
+    if (!image && product.pixabayQuery) {
+      const pixabayImg = images.find(img => img.tags.toLowerCase().includes(product.id));
+      image = pixabayImg?.webformatURL || 'https://images.pexels.com/photos/4241704/pexels-photo-4241704.jpeg?auto=compress&cs=tinysrgb&w=800';
     }
-  ];
+
+    return {
+      id: product.id,
+      slug: product.slug,
+      name: itemT.name,
+      price: product.price,
+      description: itemT.shortDescription || itemT.description,
+      image: image
+    };
+  });
 
   return (
     <main className="min-h-screen">

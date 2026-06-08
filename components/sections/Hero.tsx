@@ -4,6 +4,7 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Button3D } from '../ui/Button3D';
 import { motion } from 'framer-motion';
+import { ClipboardList, Package } from 'lucide-react';
 
 import Image from 'next/image';
 
@@ -59,10 +60,12 @@ export const Hero: React.FC = () => {
               {t('description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-              <Button3D href="/request" variant="primary" size="lg" className="w-full">
+              <Button3D href="/request" variant="primary" size="lg" className="w-full flex items-center justify-center gap-3">
+                <ClipboardList size={22} className="extruded-detail" />
                 {t('cta.primary')}
               </Button3D>
-              <Button3D href="/products" variant="secondary" size="lg" className="w-full">
+              <Button3D href="/products" variant="secondary" size="lg" className="w-full flex items-center justify-center gap-3">
+                <Package size={22} className="extruded-detail" />
                 {t('cta.secondary')}
               </Button3D>
             </div>

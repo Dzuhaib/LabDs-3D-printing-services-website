@@ -52,6 +52,34 @@
       "container": {
         "name": "Kitchen Container",
         "description": "Food-safe storage box with airtight seal."
+      },
+      "nescafe": {
+        "name": "Nescafé Gold 200g Coffee Dispenser",
+        "shortDescription": "Make your coffee routine cleaner, faster and more stylish ☕✨ This 3D printed coffee dispenser is specially designed for the Nescafé Gold 200g jar.",
+        "description": "Upgrade your coffee corner with this practical and eye-catching 3D printed coffee dispenser. Designed specifically for the Nescafé Gold 200g glass jar, it allows you to dispense your instant coffee in a cleaner, faster and more comfortable way. No more opening the jar every time, no more using a spoon, and less coffee mess on your kitchen counter.",
+        "compatibilityNotice": "⚠️ This product is made only for the Nescafé Gold 200g glass jar. Other sizes or brands may not fit.",
+        "highlights": [
+          "Designed for Nescafé Gold 200g jar ✅",
+          "Cleaner and easier coffee dispensing ✨",
+          "No spoon needed 🥄",
+          "Great for kitchen, office or coffee station ☕",
+          "Stable and space-saving 🏠",
+          "Custom colors available 🎨",
+          "Perfect gift for coffee lovers 🎁"
+        ],
+        "material": "3D printed plastic",
+        "specs": {
+          "fits": "Nescafé Gold 200g glass jar",
+          "notFits": "Other sizes, brands or shapes"
+        },
+        "included": ["1x 3D printed coffee dispenser"],
+        "notIncluded": ["Nescafé Gold jar", "Coffee", "Decoration items"],
+        "care": [
+          "Clean only with a dry or slightly damp cloth",
+          "Not dishwasher safe",
+          "Do not expose to direct heat or hot surfaces"
+        ],
+        "recommendedUse": "Ideal for instant coffee, especially for daily Nescafé Gold users who want a cleaner and more convenient way to prepare their coffee."
       }
     },
     "actions": {

@@ -52,6 +52,34 @@
       "container": {
         "name": "Küchenbehälter",
         "description": "Lebensmittelechte Aufbewahrungsbox mit luftdichtem Verschluss."
+      },
+      "nescafe": {
+        "name": "Nescafé Gold 200g Kaffeespender",
+        "shortDescription": "Machen Sie Ihre Kaffeeroutine sauberer, schneller und stilvoller ☕✨ Dieser 3D-gedruckte Kaffeespender ist speziell für das Nescafé Gold 200g Glas konzipiert.",
+        "description": "Werten Sie Ihre Kaffeeecke mit diesem praktischen und auffälligen 3D-gedruckten Kaffeespender auf. Er wurde speziell für das Nescafé Gold 200g Glas entwickelt und ermöglicht es Ihnen, Ihren Instantkaffee sauberer, schneller und bequemer zu dosieren. Kein ständiges Öffnen des Glases mehr, kein Löffel nötig und weniger Kaffeereste auf Ihrer Küchenarbeitsplatte.",
+        "compatibilityNotice": "⚠️ Dieses Produkt ist nur für das Nescafé Gold 200g Glas hergestellt. Andere Größen oder Marken passen möglicherweise nicht.",
+        "highlights": [
+          "Entwickelt für Nescafé Gold 200g Glas ✅",
+          "Sauberere und einfachere Kaffeedosierung ✨",
+          "Kein Löffel nötig 🥄",
+          "Ideal für Küche, Büro oder Kaffeestation ☕",
+          "Stabil und platzsparend 🏠",
+          "In verschiedenen Farben erhältlich 🎨",
+          "Perfektes Geschenk für Kaffeeliebhaber 🎁"
+        ],
+        "material": "3D-gedruckter Kunststoff",
+        "specs": {
+          "fits": "Nescafé Gold 200g Glas",
+          "notFits": "Andere Größen, Marken oder Formen"
+        },
+        "included": ["1x 3D-gedruckter Kaffeespender"],
+        "notIncluded": ["Nescafé Gold Glas", "Kaffee", "Dekorationsartikel"],
+        "care": [
+          "Nur mit einem trockenen oder leicht feuchten Tuch reinigen",
+          "Nicht spülmaschinenfest",
+          "Nicht direkter Hitze oder heißen Oberflächen aussetzen"
+        ],
+        "recommendedUse": "Ideal für Instantkaffee, besonders für tägliche Nescafé Gold Nutzer, die eine sauberere und bequemere Art der Kaffeezubereitung suchen."
       }
     },
     "actions": {
