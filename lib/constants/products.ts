@@ -76,6 +76,13 @@ export const PRODUCTS: Product[] = [
     price: 34.90,
     image: '/product/pikachu-stitch.jpeg',
     category: 'decor'
+  },
+  {
+    id: 'fitzek-gnome',
+    slug: 'sebastian-fitzek-gnome',
+    price: 49.90,
+    image: '/product/fitzek-gnome.jpeg',
+    category: 'decor'
   }
 ];
 
