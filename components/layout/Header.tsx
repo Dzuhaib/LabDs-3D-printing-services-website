@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
 
   const toggleLocale = () => {
     const nextLocale = locale === 'de' ? 'en' : 'de';
-    router.replace(pathname, { locale: nextLocale });
+    router.replace(pathname as any, { locale: nextLocale });
   };
 
   const switcherLabel = locale === 'de' ? 'EN' : 'DE';

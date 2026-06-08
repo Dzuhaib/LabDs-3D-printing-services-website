@@ -48,7 +48,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   return (
     <Card3D className="group flex flex-col h-full p-0 overflow-hidden">
-      <Link href={`/products/${product.slug}`} className="flex flex-col h-full p-4">
+      <Link 
+        href={{
+          pathname: '/products/[slug]',
+          params: { slug: product.slug }
+        }} 
+        className="flex flex-col h-full p-4"
+      >
         {/* Image Preview */}
         <div className="relative aspect-square rounded-xl overflow-hidden mb-6 bg-slate-50">
           <AnimatePresence mode="wait">

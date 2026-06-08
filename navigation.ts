@@ -34,6 +34,10 @@ export const routing = defineRouting({
     '/privacy': {
       en: '/privacy',
       de: '/datenschutz'
+    },
+    '/products/[slug]': {
+      en: '/products/[slug]',
+      de: '/produkte/[slug]'
     }
   }
 });
