@@ -12,9 +12,22 @@ interface ColorSelectorProps {
 }
 
 export const ColorSelector: React.FC<ColorSelectorProps> = ({ selectedId, onSelect, label }) => {
+  const selectedFilament = BAMBU_FILAMENTS.find(f => f.id === selectedId);
+
   return (
     <div className="flex flex-col gap-3">
-      {label && <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider">{label}</span>}
+      <div className="flex justify-between items-center">
+        {label && (
+          <span className="text-xs font-black text-slate-400 uppercase tracking-widest">
+            {label}
+          </span>
+        )}
+        {selectedFilament && (
+          <span className="text-sm font-bold text-slate-900">
+            {selectedFilament.name}
+          </span>
+        )}
+      </div>
       <div className="flex flex-wrap gap-3">
         {BAMBU_FILAMENTS.map((filament) => (
           <motion.button
