@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
       <div className="w-full lg:hidden pt-4 px-4">
         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-3d-soft border border-slate-200">
           <Image 
-            src="/hero.jpeg"
+            src="/hero-mobile.jpeg"
             alt="Hero Background"
             fill
             className="object-cover brightness-[1.05] contrast-[1.05]"
