@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Card3D } from '../ui/Card3D';
 import { Button3D } from '../ui/Button3D';
 import { ColorSelector } from '../ui/ColorSelector';
-import { Filament } from '@/lib/constants/filaments';
+import { BAMBU_FILAMENTS, Filament } from '@/lib/constants/filaments';
 import { ShoppingCart, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCartStore } from '@/store/useCartStore';
