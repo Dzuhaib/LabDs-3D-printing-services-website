@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 pt-3 px-4 sm:px-6">
+      <header className="absolute top-0 left-0 right-0 z-50 pt-3 px-4 sm:px-6">
         <div className="container mx-auto">
           {/* Physical Header Slab (The "Baseplate") */}
           <div className="relative">

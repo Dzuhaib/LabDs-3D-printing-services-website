@@ -5,67 +5,75 @@ import { useTranslations } from 'next-intl';
 import { Button3D } from '../ui/Button3D';
 import { motion } from 'framer-motion';
 import { ClipboardList, Package } from 'lucide-react';
-
 import Image from 'next/image';
 
 export const Hero: React.FC = () => {
   const t = useTranslations('Index');
 
   return (
-    <section className="relative overflow-hidden bg-transparent min-h-screen lg:min-h-[85vh] flex flex-col lg:flex-row items-center">
-      {/* Mobile-Only Top Image */}
-      <div className="w-full lg:hidden pt-4 px-4">
-        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-3d-soft border border-slate-200">
-          <Image 
-            src="/hero-mobile.jpeg"
-            alt="Hero Background"
-            fill
-            className="object-cover brightness-[1.05] contrast-[1.05]"
-            priority
-            quality={100}
-            unoptimized
-          />
-          {/* Subtle "Printed" texture overlay on mobile image */}
-          <div className="absolute inset-0 top-infill opacity-5 pointer-events-none" />
-        </div>
-      </div>
-
-      {/* Desktop Background Image (Hidden on Mobile) */}
-      <div className="absolute inset-0 z-0 hidden lg:block">
+    <section className="relative overflow-hidden bg-black min-h-[70vh] lg:min-h-[85vh] flex flex-col justify-end pt-40 pb-12 md:pb-20 lg:pb-24">
+      {/* Background for Mobile - Absolute position to be behind everything */}
+      <div className="lg:hidden absolute inset-0 z-0">
         <Image 
-          src="/hero.jpeg"
-          alt="Hero Background"
+          src="/mobile.jpeg"
+          alt="Hero Background Mobile"
           fill
-          className="object-cover opacity-100 brightness-[1.05] contrast-[1.05]"
+          className="object-cover"
           priority
           quality={100}
           unoptimized
         />
-        {/* Subtle "Printed" texture overlay on background */}
-        <div className="absolute inset-0 top-infill opacity-5 pointer-events-none" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 py-12 md:py-40 lg:py-52">
-        <div className="max-w-3xl">
+      {/* Background for Desktop - Absolute position to be behind everything */}
+      <div className="hidden lg:block absolute inset-0 z-0">
+        <Image 
+          src="/desktop.jpeg"
+          alt="Hero Background Desktop"
+          fill
+          className="object-cover"
+          priority
+          quality={100}
+          unoptimized
+        />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10 w-full">
+        <div className="max-w-3xl mx-auto lg:mx-0">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center lg:text-left"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center lg:text-left flex flex-col items-center lg:items-start"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-slate-900 leading-[1.1] mb-6 tracking-tight drop-shadow-md">
+            {/* Pure white text, no shadows */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight tracking-tight mb-4">
               {t('title')}
             </h1>
-            <p className="text-lg sm:text-xl text-slate-700 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-bold drop-shadow-sm">
+            
+            <p className="text-lg sm:text-xl md:text-2xl text-white max-w-xl leading-relaxed font-bold mb-8">
               {t('description')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-              <Button3D href="/request" variant="primary" size="lg" className="w-full flex items-center justify-center gap-3">
-                <ClipboardList size={22} className="extruded-detail" />
+
+            {/* Standard sized buttons without extra padding in className */}
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <Button3D 
+                href="/request" 
+                variant="primary" 
+                size="lg" 
+                className="w-full sm:w-auto"
+              >
+                <ClipboardList size={20} className="extruded-detail" />
                 {t('cta.primary')}
               </Button3D>
-              <Button3D href="/products" variant="secondary" size="lg" className="w-full flex items-center justify-center gap-3">
-                <Package size={22} className="extruded-detail" />
+              
+              <Button3D 
+                href="/products" 
+                variant="secondary" 
+                size="lg" 
+                className="w-full sm:w-auto"
+              >
+                <Package size={20} className="extruded-detail" />
                 {t('cta.secondary')}
               </Button3D>
             </div>
