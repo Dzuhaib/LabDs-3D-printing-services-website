@@ -62,6 +62,20 @@ export const PRODUCTS: Product[] = [
       '/product/shelf-9.jpeg'
     ],
     category: 'home'
+  },
+  {
+    id: 'lithophane',
+    slug: 'lithophane-photo-frame-lamp',
+    price: 34.90,
+    image: '/product/lithophane-main.jpeg',
+    gallery: [
+      '/product/lithophane-main.jpeg',
+      '/product/lithophane-1.jpeg',
+      '/product/lithophane-2.jpeg',
+      '/product/lithophane-3.jpeg',
+      '/product/lithophane-4.jpeg'
+    ],
+    category: 'decor'
   }
 ];
 

@@ -229,6 +229,42 @@
           "Aggressive Reinigungsmittel vermeiden"
         ],
         "recommendedUse": "Verwenden Sie es zur Präsentation von Büchern, Figuren, Pflanzen, Sammlerstücken oder persönlichen Gegenständen. Perfekt für Wohnzimmer, Büros, Gaming-Zimmer und kreative Räume."
+      },
+      "lithophane": {
+        "name": "Personalisierte 3D-Lithophan Fotolampe",
+        "shortDescription": "Verwandeln Sie Ihre Lieblingserinnerung in ein leuchtendes Kunstwerk ✨📸 Dieses personalisierte 3D-Lithophan verwandelt Ihr Foto in ein wunderschönes beleuchtetes Display.",
+        "description": "Halten Sie Ihre schönsten Erinnerungen auf einzigartige und emotionale Weise lebendig mit dieser personalisierten 3D-Lithophan Fotolampe ✨🖼️💡\n\nDieses individuelle Stück verwandelt Ihr Lieblingsfoto in ein detailliertes Lithophan-Bild, das sanft leuchtet und eine warme, elegante und bedeutungsvolle Dekoration schafft. Tagsüber sieht es aus wie ein schönes gerahmtes Bild, und bei Beleuchtung offenbart es die volle Magie des Fotos in einem atemberaubenden 3D-Lichteffekt. Sie können die Rahmenfarbe, die Fotoausrichtung und den Gesamtstil anpassen, um ein wirklich persönliches Stück zu schaffen.",
+        "compatibilityNotice": "⚠️ Hinweis zur Fotoqualität: Bitte senden Sie ein klares, hochwertiges Foto für beste Ergebnisse. Das endgültige Detail hängt von der Helligkeit und Schärfe Ihres Bildes ab.",
+        "highlights": [
+          "Personalisiert mit Ihrem eigenen Foto 📸",
+          "Wunderschöner beleuchteter 3D-Lichteffekt ✨",
+          "Anpassbare Rahmenfarbe & Ausrichtung 🎨",
+          "Horizontale oder vertikale Präsentation ↔️",
+          "Einzigartige emotionale Geschenkidee 🎁",
+          "3D-gedruckt mit hoher Präzision",
+          "Ideal für Nachttische und Erinnerungsecken"
+        ],
+        "material": "Hochwertiger 3D-gedruckter Kunststoff",
+        "specs": {
+          "fits": "Personalisiertes Foto (alle Ausrichtungen)",
+          "notFits": "Außenbereich oder direkte Hitze"
+        },
+        "included": [
+          "1x Personalisierte Lithophan Fotoplatte",
+          "1x Individueller Rahmen",
+          "Beleuchtungs-Setup (je nach gewählter Version)"
+        ],
+        "notIncluded": [
+          "Auf den Fotos gezeigte Dekorationsartikel",
+          "Möbel oder Hintergrundzubehör zur Inszenierung"
+        ],
+        "care": [
+          "Vorsichtig mit einem trockenen oder leicht feuchten Tuch reinigen",
+          "Keine aggressiven Reinigungsmittel verwenden",
+          "Von direkter Hitze oder offener Flamme fernhalten",
+          "Nur für den Innenbereich"
+        ],
+        "recommendedUse": "Perfekt für Paare, Familien, Hochzeiten, Gedenkstücke oder als warmes Dekorationselement auf Wohnzimmerregalen und Nachttischen."
       }
     },
     "actions": {
