@@ -76,6 +76,19 @@ export const PRODUCTS: Product[] = [
       '/product/lithophane-4.jpeg'
     ],
     category: 'decor'
+  },
+  {
+    id: 'zelda-lights',
+    slug: 'zelda-christmas-led-lights',
+    price: 44.90,
+    image: '/product/zelda-lights-main.jpeg',
+    gallery: [
+      '/product/zelda-lights-main.jpeg',
+      '/product/zelda-lights-1.jpeg',
+      '/product/zelda-lights-2.jpeg',
+      '/product/zelda-lights-3.jpeg'
+    ],
+    category: 'decor'
   }
 ];
 
