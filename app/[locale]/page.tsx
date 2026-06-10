@@ -24,7 +24,7 @@ export default async function Home({ params }: HomeProps) {
   const requestT = await getTranslations({ locale, namespace: 'Request' });
 
   // Fetch images for featured products if needed
-  const featuredIds = ['calendar', 'pikachu-stitch', 'nescafe'];
+  const featuredIds = ['calendar', 'shelf', 'nescafe'];
   const featuredProductsData = PRODUCTS.filter(p => featuredIds.includes(p.id));
   
   const images: PixabayImage[] = await Promise.all(

@@ -3,6 +3,7 @@ export interface Product {
   slug: string;
   price: number;
   image: string;
+  gallery?: string[];
   category: 'decor' | 'home';
   pixabayQuery?: string;
 }
@@ -41,6 +42,25 @@ export const PRODUCTS: Product[] = [
     slug: 'orko-popcorn-bowl',
     price: 34.50,
     image: '/product/orko-bowl.jpeg',
+    category: 'home'
+  },
+  {
+    id: 'shelf',
+    slug: 'modular-wall-shelf',
+    price: 29.90,
+    image: '/product/shelf-main.jpeg',
+    gallery: [
+      '/product/shelf-main.jpeg',
+      '/product/shelf-1.jpeg',
+      '/product/shelf-2.jpeg',
+      '/product/shelf-3.jpeg',
+      '/product/shelf-4.jpeg',
+      '/product/shelf-5.jpeg',
+      '/product/shelf-6.jpeg',
+      '/product/shelf-7.jpeg',
+      '/product/shelf-8.jpeg',
+      '/product/shelf-9.jpeg'
+    ],
     category: 'home'
   }
 ];

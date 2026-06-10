@@ -193,6 +193,42 @@
           "Von direkter Hitze oder offener Flamme fernhalten"
         ],
         "recommendedUse": "Ideal für Filmabende, Snack-Tische im Geek-Stil oder als nostalgisches Ausstellungsstück in Gaming-Zimmern und Fan-Sammlungen."
+      },
+      "shelf": {
+        "name": "Modulares Wandregal-System",
+        "shortDescription": "Gestalten Sie eine Wand, die wirklich zu Ihrem Stil passt 🏠✨ Dieses modulare 3D-gedruckte Wandregal-System ermöglicht es Ihnen, einzigartige Layouts für jeden Raum zu bauen.",
+        "description": "Verwandeln Sie jede Wand in ein schönes und funktionales Design-Statement mit diesem modularen Wandregal-System ✨🧩\n\nDieses 3D-gedruckte modulare Regal ist für Menschen gedacht, die mehr als nur ein einfaches Wandregal wollen. Mit seinen modernen geschwungenen Formen, klaren Linien und flexiblen Layout-Optionen ermöglicht es Ihnen, ein individuelles Wanddesign zu erstellen, das zu Ihrem Raum, Ihrem Stil und Ihren Bedürfnissen passt. Das System besteht aus separaten modularen Teilen, die auf verschiedene Weise kombiniert werden können – von minimalistischen Layouts bis hin zu organischen Wellenformen.",
+        "compatibilityNotice": "⚠️ Installationshinweis: Die endgültige Festigkeit und Stabilität hängen von der gewählten Konfiguration und der Montagemethode ab. Verwenden Sie geeignete Schrauben und Dübel für Ihren Wandtyp.",
+        "highlights": [
+          "Modulares Wandregal-System ✅",
+          "Modernes geschwungenes Design 🌊",
+          "Vollständig anpassbare Layouts & Farben 🎨",
+          "Echtzeit-Farbvorschau vor der Bestellung ✨",
+          "Erweiterbar mit zusätzlichen Modulen 🧩",
+          "Perfekt für Sammler, Gamer und Home-Deko 🏠",
+          "Einzigartiges Design, das auffällt"
+        ],
+        "material": "Hochwertiger 3D-gedruckter Kunststoff",
+        "specs": {
+          "fits": "Modulares Layout - jede Größe",
+          "notFits": "Außenbereich oder direkte Hitze"
+        },
+        "included": [
+          "Gewählte modulare Regalkonfiguration",
+          "Handgefertigte 3D-gedruckte Komponenten"
+        ],
+        "notIncluded": [
+          "Wandschrauben oder Montagezubehör",
+          "LED-Beleuchtung (sofern nicht anders angegeben)",
+          "Auf den Fotos gezeigte Dekorationsartikel"
+        ],
+        "care": [
+          "Vorsichtig mit einem trockenen oder leicht feuchten Tuch reinigen",
+          "Nicht spülmaschinenfest",
+          "Verwendung im Innenbereich empfohlen",
+          "Aggressive Reinigungsmittel vermeiden"
+        ],
+        "recommendedUse": "Verwenden Sie es zur Präsentation von Büchern, Figuren, Pflanzen, Sammlerstücken oder persönlichen Gegenständen. Perfekt für Wohnzimmer, Büros, Gaming-Zimmer und kreative Räume."
       }
     },
     "actions": {
