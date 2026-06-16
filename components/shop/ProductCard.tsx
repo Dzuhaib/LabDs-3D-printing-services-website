@@ -6,6 +6,7 @@ import { Card3D } from '../ui/Card3D';
 import { Button3D } from '../ui/Button3D';
 import { ColorSelector } from '../ui/ColorSelector';
 import { BAMBU_FILAMENTS, Filament } from '@/lib/constants/filaments';
+import { getProductImage } from '@/lib/constants/products';
 import { ShoppingCart, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCartStore } from '@/store/useCartStore';
@@ -40,7 +41,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       price: product.price,
       quantity: 1,
       colors: [selectedColor.name],
-      image: product.image,
+      image: getProductImage(product, selectedColor),
     });
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
@@ -67,16 +68,18 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               className="w-full h-full"
             >
                <Image 
-                src={product.image} 
-                alt={product.name}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              {/* Dynamic Color Overlay (Simulated) */}
-              <div 
-                className="absolute inset-0 opacity-20 mix-blend-multiply" 
-                style={{ backgroundColor: selectedColor.hex }}
-              />
+                 src={getProductImage(product, selectedColor)} 
+                 alt={product.name}
+                 fill
+                 className="object-cover group-hover:scale-105 transition-transform duration-500"
+               />
+               {/* Dynamic Color Overlay (Simulated) — only for products without variation images */}
+               {product.id !== 'nescafe' && (
+                 <div 
+                   className="absolute inset-0 opacity-20 mix-blend-multiply" 
+                   style={{ backgroundColor: selectedColor.hex }}
+                 />
+               )}
             </motion.div>
           </AnimatePresence>
           

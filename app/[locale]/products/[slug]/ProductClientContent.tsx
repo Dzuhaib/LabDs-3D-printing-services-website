@@ -4,6 +4,7 @@ import React from 'react';
 import { Button3D } from "@/components/ui/Button3D";
 import { ColorSelector } from "@/components/ui/ColorSelector";
 import { BAMBU_FILAMENTS, Filament } from '@/lib/constants/filaments';
+import { getProductImage } from '@/lib/constants/products';
 import { ShoppingCart, Check } from "lucide-react";
 import { useCartStore } from '@/store/useCartStore';
 import { cn } from '@/lib/utils';
@@ -25,9 +26,17 @@ interface ProductClientContentProps {
 export const ProductClientContent: React.FC<ProductClientContentProps> = ({ product }) => {
   const t = useTranslations('Products.actions');
   const [selectedColor, setSelectedColor] = React.useState<Filament>(BAMBU_FILAMENTS[0]);
-  const [activeImage, setActiveImage] = React.useState(product.image);
+  const [activeImage, setActiveImage] = React.useState(
+    product.id === 'nescafe' ? getProductImage(product, BAMBU_FILAMENTS[0]) : product.image
+  );
   const [added, setAdded] = React.useState(false);
   const addItem = useCartStore((state) => state.addItem);
+
+  React.useEffect(() => {
+    if (product.id === 'nescafe') {
+      setActiveImage(getProductImage(product, selectedColor));
+    }
+  }, [selectedColor, product]);
 
   const handleAddToCart = () => {
     addItem({
@@ -66,11 +75,13 @@ export const ProductClientContent: React.FC<ProductClientContentProps> = ({ prod
                   className="object-cover"
                   priority
                 />
-                {/* Dynamic Color Overlay (Only if main image is showing product) */}
-                <div 
-                  className="absolute inset-0 opacity-10 mix-blend-multiply pointer-events-none" 
-                  style={{ backgroundColor: selectedColor.hex }}
-                />
+                {/* Dynamic Color Overlay — only for products without variation images */}
+                {product.id !== 'nescafe' && (
+                  <div 
+                    className="absolute inset-0 opacity-10 mix-blend-multiply pointer-events-none" 
+                    style={{ backgroundColor: selectedColor.hex }}
+                  />
+                )}
               </motion.div>
             </AnimatePresence>
             <div className="absolute inset-0 layer-lines opacity-10 pointer-events-none" />

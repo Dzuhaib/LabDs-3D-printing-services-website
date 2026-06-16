@@ -1,3 +1,5 @@
+import { Filament } from './filaments';
+
 export interface Product {
   id: string;
   slug: string;
@@ -6,6 +8,15 @@ export interface Product {
   gallery?: string[];
   category: 'decor' | 'home';
   pixabayQuery?: string;
+}
+
+export function getProductImage(product: { id: string; image: string }, filament: Filament): string {
+  if (product.id === 'nescafe') {
+    if (filament.id === 'black') return product.image;
+    const colorName = filament.name.replace(/\s*\(.*?\)\s*$/, '');
+    return `/product/nescafe-dispenser ${colorName}.png`;
+  }
+  return product.image;
 }
 
 export const PRODUCTS: Product[] = [
