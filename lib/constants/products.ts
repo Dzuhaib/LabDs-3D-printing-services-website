@@ -10,25 +10,7 @@ export interface Product {
   pixabayQuery?: string;
 }
 
-const NESCAFE_IMAGE_OVERRIDES: Record<string, string> = {
-  'Blue': '/product/nescafe-dispenser Blue.jpg',
-  'Cobalt Blue': '/product/nescafe-dispenser Cobalt Blue.jpg',
-  'Cocoa Brown': '/product/nescafe-dispenser Cocoa Brown.jpg',
-  'Cyan': '/product/nescafe-dispenser Cyan.jpg',
-  'Hot Pink': '/product/nescafe-dispenser Hot Pink.jpg',
-  'Light Gray': '/product/nescafe-dispenser Light Gray.jpg',
-  'Magenta': '/product/nescafe-dispenser Magenta.jpg',
-  'Maroon Red': '/product/nescafe-dispenser Maroon Red.jpg',
-  'Purple': '/product/nescafe-dispenser Purple.jpg',
-  'Turquoise': '/product/nescafe-dispenser Turquoise.jpg',
-};
-
-export function getProductImage(product: { id: string; image: string }, filament: Filament): string {
-  if (product.id === 'nescafe') {
-    if (filament.id === 'black') return product.image;
-    const colorName = filament.name.replace(/\s*\(.*?\)\s*$/, '');
-    return NESCAFE_IMAGE_OVERRIDES[colorName] ?? `/product/nescafe-dispenser ${colorName}.png`;
-  }
+export function getProductImage(product: { id: string; image: string }, _filament: Filament): string {
   return product.image;
 }
 
@@ -37,7 +19,13 @@ export const PRODUCTS: Product[] = [
     id: 'nescafe',
     slug: 'nescafe-gold-dispenser',
     price: 24.99,
-    image: '/product/nescafe-dispenser.png',
+    image: '/product/nescafe-dispenser.jpeg',
+    gallery: [
+      '/product/nescafe-dispenser.jpeg',
+      '/product/nescafe-dispenser 1.jpeg',
+      '/product/nescafe-dispenser2.jpeg',
+      '/product/nescafe-dispenser 5.jpeg',
+    ],
     category: 'home'
   },
   {

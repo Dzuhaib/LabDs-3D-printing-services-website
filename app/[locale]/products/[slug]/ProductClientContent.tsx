@@ -4,7 +4,6 @@ import React from 'react';
 import { Button3D } from "@/components/ui/Button3D";
 import { ColorSelector } from "@/components/ui/ColorSelector";
 import { BAMBU_FILAMENTS, Filament } from '@/lib/constants/filaments';
-import { getProductImage } from '@/lib/constants/products';
 import { ShoppingCart, Check } from "lucide-react";
 import { useCartStore } from '@/store/useCartStore';
 import { cn } from '@/lib/utils';
@@ -26,17 +25,9 @@ interface ProductClientContentProps {
 export const ProductClientContent: React.FC<ProductClientContentProps> = ({ product }) => {
   const t = useTranslations('Products.actions');
   const [selectedColor, setSelectedColor] = React.useState<Filament>(BAMBU_FILAMENTS[0]);
-  const [activeImage, setActiveImage] = React.useState(
-    product.id === 'nescafe' ? getProductImage(product, BAMBU_FILAMENTS[0]) : product.image
-  );
+  const [activeImage, setActiveImage] = React.useState(product.image);
   const [added, setAdded] = React.useState(false);
   const addItem = useCartStore((state) => state.addItem);
-
-  React.useEffect(() => {
-    if (product.id === 'nescafe') {
-      setActiveImage(getProductImage(product, selectedColor));
-    }
-  }, [selectedColor, product]);
 
   const handleAddToCart = () => {
     addItem({
