@@ -6,7 +6,6 @@ import { Card3D } from '../ui/Card3D';
 import { Button3D } from '../ui/Button3D';
 import { ColorSelector } from '../ui/ColorSelector';
 import { BAMBU_FILAMENTS, Filament } from '@/lib/constants/filaments';
-import { getProductImage } from '@/lib/constants/products';
 import { ShoppingCart, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCartStore } from '@/store/useCartStore';
@@ -28,7 +27,8 @@ interface ProductCardProps {
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const t = useTranslations('Products.actions');
-  const [selectedColor, setSelectedColor] = React.useState<Filament>(BAMBU_FILAMENTS[0]);
+  const [primaryColor, setPrimaryColor] = React.useState<Filament>(BAMBU_FILAMENTS[0]);
+  const [secondaryColor, setSecondaryColor] = React.useState<Filament>(BAMBU_FILAMENTS[1] ?? BAMBU_FILAMENTS[0]);
   const [added, setAdded] = React.useState(false);
   const addItem = useCartStore((state) => state.addItem);
 
@@ -36,12 +36,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     e.preventDefault();
     e.stopPropagation();
     addItem({
-      id: `${product.id}-${selectedColor.id}`,
+      id: `${product.id}-${primaryColor.id}-${secondaryColor.id}`,
       name: product.name,
       price: product.price,
       quantity: 1,
-      colors: [selectedColor.name],
-      image: getProductImage(product, selectedColor),
+      colors: [primaryColor.name, secondaryColor.name],
+      image: product.image,
     });
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
@@ -60,7 +60,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className="relative aspect-square rounded-xl overflow-hidden mb-6 bg-slate-50">
           <AnimatePresence mode="wait">
             <motion.div
-              key={selectedColor.id}
+              key={primaryColor.id}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -68,16 +68,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               className="w-full h-full"
             >
                <Image 
-                 src={getProductImage(product, selectedColor)} 
+                 src={product.image}
                  alt={product.name}
                  fill
                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                />
-               {/* Dynamic Color Overlay (Simulated) — only for products without variation images */}
                {product.id !== 'nescafe' && (
                  <div 
                    className="absolute inset-0 opacity-20 mix-blend-multiply" 
-                   style={{ backgroundColor: selectedColor.hex }}
+                   style={{ backgroundColor: primaryColor.hex }}
                  />
                )}
             </motion.div>
@@ -95,12 +94,26 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           
           <p className="text-sm text-slate-500 mb-6 flex-1">{product.description}</p>
 
-          <div className="space-y-6">
+          <div className="space-y-3">
             <div onClick={(e) => e.preventDefault()}>
-              <ColorSelector 
-                selectedId={selectedColor.id} 
-                onSelect={setSelectedColor}
-                label={t('selectColor')}
+              <span className="text-xs font-black text-slate-400 uppercase tracking-widest">
+                {t('selectColor')}
+              </span>
+              <ColorSelector
+                selectedId={primaryColor.id}
+                onSelect={setPrimaryColor}
+                label="Primary Color"
+              />
+            </div>
+
+            <div onClick={(e) => e.preventDefault()}>
+              <span className="text-xs font-black text-slate-400 uppercase tracking-widest">
+                Secondary Color
+              </span>
+              <ColorSelector
+                selectedId={secondaryColor.id}
+                onSelect={setSecondaryColor}
+                label="Secondary Color"
               />
             </div>
 

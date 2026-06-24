@@ -24,18 +24,19 @@ interface ProductClientContentProps {
 
 export const ProductClientContent: React.FC<ProductClientContentProps> = ({ product }) => {
   const t = useTranslations('Products.actions');
-  const [selectedColor, setSelectedColor] = React.useState<Filament>(BAMBU_FILAMENTS[0]);
+  const [primaryColor, setPrimaryColor] = React.useState<Filament>(BAMBU_FILAMENTS[0]);
+  const [secondaryColor, setSecondaryColor] = React.useState<Filament>(BAMBU_FILAMENTS[1] ?? BAMBU_FILAMENTS[0]);
   const [activeImage, setActiveImage] = React.useState(product.image);
   const [added, setAdded] = React.useState(false);
   const addItem = useCartStore((state) => state.addItem);
 
   const handleAddToCart = () => {
     addItem({
-      id: `${product.id}-${selectedColor.id}`,
+      id: `${product.id}-${primaryColor.id}-${secondaryColor.id}`,
       name: product.name,
       price: product.price,
       quantity: 1,
-      colors: [selectedColor.name],
+      colors: [primaryColor.name, secondaryColor.name],
       image: product.image,
     });
     setAdded(true);
@@ -66,11 +67,10 @@ export const ProductClientContent: React.FC<ProductClientContentProps> = ({ prod
                   className="object-cover"
                   priority
                 />
-                {/* Dynamic Color Overlay — only for products without variation images */}
                 {product.id !== 'nescafe' && (
                   <div 
                     className="absolute inset-0 opacity-10 mix-blend-multiply pointer-events-none" 
-                    style={{ backgroundColor: selectedColor.hex }}
+                    style={{ backgroundColor: primaryColor.hex }}
                   />
                 )}
               </motion.div>
@@ -99,12 +99,28 @@ export const ProductClientContent: React.FC<ProductClientContentProps> = ({ prod
       </div>
 
       {/* Right: Interaction */}
-      <div className="space-y-8">
-        <ColorSelector 
-          selectedId={selectedColor.id} 
-          onSelect={setSelectedColor}
-          label={t('selectColor')}
-        />
+      <div className="space-y-6">
+        <div className="space-y-2">
+          <span className="text-xs font-black text-slate-400 uppercase tracking-widest">
+            {t('selectColor')}
+          </span>
+          <ColorSelector
+            selectedId={primaryColor.id}
+            onSelect={setPrimaryColor}
+            label="Primary Color"
+          />
+        </div>
+
+        <div className="space-y-2">
+          <span className="text-xs font-black text-slate-400 uppercase tracking-widest">
+            Secondary Color
+          </span>
+          <ColorSelector
+            selectedId={secondaryColor.id}
+            onSelect={setSecondaryColor}
+            label="Secondary Color"
+          />
+        </div>
 
         <div className="flex flex-col sm:flex-row gap-4">
           <Button3D 
