@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { useTranslations, useLocale } from 'next-intl';
-import { Link, usePathname, useRouter } from '@/navigation';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/navigation';
 import { ShoppingBag, Menu, X, User, Heart, Home, Package, ClipboardList, Info, Phone } from 'lucide-react';
 import { useCartStore } from '@/store/useCartStore';
 import { CartDrawer } from '../shop/CartDrawer';
@@ -10,20 +10,9 @@ import { LogoPlate } from '../ui/LogoPlate';
 
 export const Header: React.FC = () => {
   const t = useTranslations('Navigation');
-  const locale = useLocale();
-  const pathname = usePathname();
-  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isCartOpen, setIsCartOpen] = React.useState(false);
   const items = useCartStore((state) => state.items);
-
-  const toggleLocale = () => {
-    const nextLocale = locale === 'de' ? 'en' : 'de';
-    router.replace(pathname as any, { locale: nextLocale });
-  };
-
-  const switcherLabel = locale === 'de' ? 'EN' : 'DE';
-  const mobileSwitcherLabel = locale === 'de' ? 'Switch to English' : 'Auf Deutsch wechseln';
 
   return (
     <>
@@ -91,15 +80,6 @@ export const Header: React.FC = () => {
                     {t('contact')}
                   </Link>
 
-                  <div className="h-4 w-px bg-slate-200 hidden md:block mx-1" />
-
-                  <button 
-                    onClick={toggleLocale}
-                    className="hidden md:block text-[10px] font-black text-slate-400 hover:text-brand transition-all cursor-pointer w-8 extruded-detail active:scale-90"
-                  >
-                    {switcherLabel}
-                  </button>
-
                   <button className="text-slate-400 hover:text-brand transition-all hidden sm:block p-1 group" aria-label="Wishlist">
                     <Heart size={22} className="extruded-detail group-hover:scale-110 transition-transform" />
                   </button>
@@ -162,13 +142,6 @@ export const Header: React.FC = () => {
                   <User size={18} className="extruded-detail" /> Account
                 </button>
               </div>
-
-              <button 
-                onClick={() => { toggleLocale(); setIsMenuOpen(false); }}
-                className="w-full py-4 rounded-xl bg-brand text-white font-black text-center text-sm uppercase tracking-widest hover:bg-brand-dark transition-all printed-bevel print-base active:translate-y-1 active:shadow-none"
-              >
-                {mobileSwitcherLabel}
-              </button>
             </div>
           </div>
         )}
