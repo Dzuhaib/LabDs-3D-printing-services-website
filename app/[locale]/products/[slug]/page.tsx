@@ -74,12 +74,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <p className="text-2xl font-bold text-slate-900 mb-6">
             {product.price.toFixed(2)}€
           </p>
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-3xl">
-            {itemT.shortDescription || itemT.description}
-          </p>
         </div>
 
-        <ProductClientContent product={{...product, name: itemT.name, image}} />
+        <ProductClientContent product={{...product, name: itemT.name, image}} shortDescription={itemT.shortDescription || itemT.description} />
 
         {/* Detailed Sections */}
         {itemT.description && itemT.shortDescription && (

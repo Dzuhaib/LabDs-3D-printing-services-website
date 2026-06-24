@@ -20,9 +20,10 @@ interface ProductClientContentProps {
     image: string;
     gallery?: string[];
   };
+  shortDescription?: string;
 }
 
-export const ProductClientContent: React.FC<ProductClientContentProps> = ({ product }) => {
+export const ProductClientContent: React.FC<ProductClientContentProps> = ({ product, shortDescription }) => {
   const t = useTranslations('Products.actions');
   const [primaryColor, setPrimaryColor] = React.useState<Filament>(BAMBU_FILAMENTS[0]);
   const [secondaryColor, setSecondaryColor] = React.useState<Filament>(BAMBU_FILAMENTS[1] ?? BAMBU_FILAMENTS[0]);
@@ -100,6 +101,12 @@ export const ProductClientContent: React.FC<ProductClientContentProps> = ({ prod
 
       {/* Right: Interaction */}
       <div className="space-y-6">
+        {shortDescription && (
+          <p className="text-base md:text-lg text-slate-600 leading-relaxed">
+            {shortDescription}
+          </p>
+        )}
+
         <div className="space-y-2">
           <span className="text-xs font-black text-slate-400 uppercase tracking-widest">
             {t('selectColor')}
